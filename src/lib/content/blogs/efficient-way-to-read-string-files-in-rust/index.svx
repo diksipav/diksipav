@@ -30,6 +30,8 @@ comprehensive guide, I hope this exploration inspires you to experiment with
 Rust and deepen your understanding of its capabilities. You can find my project 
 at [github/simple-rust-grep-tool](https://github.com/diksipav/simple-rust-grep-tool). 
 
+&nbsp;
+
 This is not a step by step guide, you should be able to create new Rust project, 
 know how to run it, and explore and learn on your own about the crates I'm using here.
 Focus is on finding performant way to read files from disk.
