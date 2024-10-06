@@ -21,7 +21,7 @@ tags: '#software #internet #computer-networking'
 
 As you probably know, the `Internet` is a vast network of interconnected computers 
 and other devices that function seamlessly across geographical and political 
-boundaries, enabling global communication and data exchange. Internet is also `a 
+boundaries, enabling global communication and data exchange. The Internet is also `a 
 network of networks`, because it consists of countless smaller networks (home 
 networks, corporate networks...) that are interconnected to form a larger 
 global network. 
@@ -118,17 +118,17 @@ the process is reversed, moving data back up through the layers.
 
 &nbsp;
 
-Moving "up/down" through the layers is just a methaphor that helps describing order 
+Moving "up/down" through the layers is just a metaphor that helps describing order 
 of operations. The terms "up" and "down" are used because the `OSI` and `TCP/IP`
 models are often represented graphically as vertical stacks of layers, with the 
 `Application Layer` at the top and the `Physical Layer` at the bottom.
 
 <div class="img">
 
-![Transmittion of data on the Internet through protocol layers](./protocol-layers.png)
+![Transmission of data on the Internet through protocol layers](./protocol-layers.png)
 
 <small>
-Transmittion of data on the Internet through protocol layers
+Transmission of data on the Internet through protocol layers
 </small>
 </div>
 
@@ -144,7 +144,7 @@ receiving side to interpret and process the data properly.
 You can also see how routers and link-layer switches do not implement all of the 
 layers in the protocol stack. Which means that they do not process the entire range of tasks across 
 all layers of the network model. They only handle the tasks and 
-responsibilities associated with the first few bottom layers. Link-layer switch 
+responsibilities associated with the first few bottom layers. A Link-layer switch 
 operates at the `data link layer` (Layer 2) of the OSI 
 model. It connects devices within a local area network (LAN) and forwards data 
 frames based on `MAC` (Media Access Control) addresses. A MAC address is a unique
@@ -154,7 +154,7 @@ Ethernet port) for communication within a local network.
 
 &nbsp;
 
-Router operates at the `network layer` (Layer 3) 
+A Router operates at the `network layer` (Layer 3) 
 of the OSI model. It routes data packets between different networks based on 
 `IP` addresses. IP (Internet Protocol) address is an address that identifies a 
 device on a network (either local or global) for routing data between networks.
