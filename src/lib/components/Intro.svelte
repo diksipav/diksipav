@@ -12,13 +12,7 @@
 	<div class="text">
 		<p>Hi, I'm a software engineer & digital nomad from Serbia.</p>
 		<p>Former (maybe future) electronics engineer.</p>
-		<p class="top-margin">
-			By day, I code in JS and TS; by night, I dive into Rust, Zig, and Python. This is where I
-			share my insights and adventures in tech.
-		</p>
-		<p class="top-margin">
-			Currently, building at <a href="https://www.edgedb.com/" target="_blank">EdgeDB</a>.
-		</p>
+		<p class="top-margin">This is where I share my insights on software, AI, and tech.</p>
 		<p class="top-margin">I enjoy immersing myself in nature & doing outdoorsy stuff.</p>
 		<p>I LOVE to read. & sometimes I draw.</p>
 		<div class="social-icons">
