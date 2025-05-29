@@ -1,6 +1,6 @@
 ---
 id: aaa7b1f0-0017-11ea-9149-d386e8a6bfaa
-title: Quantum Computing: What Is It and How It Works
+title: Quantum Computing What Is It and How It Works
 date: 2025-05-29
 desc: Quantum Computing
 seoDesc: Quantum Computing
