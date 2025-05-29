@@ -17,14 +17,6 @@ tags: '#software #network'
 
 {desc} You can check it yourself [here](https://http3check.net/). 🎉 🎉
 
-<div class="note">
-<p>
-This post is under revision atm. Its first intro chapter is going to be updated.
-</p>
-</div>
-
-
-
 ## Intro (for novices)
 
 `HTTP (HyperText Transfer Protocol)` is the underlying protocol of the `World Wide Web`. 
