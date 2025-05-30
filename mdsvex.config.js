@@ -24,7 +24,9 @@ function remarkHeadingId() {
 			}
 		});
 
+		// Initialize file.data and fm if they don't exist
 		file.data = file.data || {};
+		file.data.fm = file.data.fm || {};
 		file.data.fm.headings = headings.slice(1);
 	};
 }
