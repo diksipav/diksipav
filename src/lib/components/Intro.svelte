@@ -25,7 +25,7 @@
 				><LinkedinIcon /></a
 			>
 			<a href="https://twitter.com/diksipav" target="_blank" class="icon"><XIcon /></a>
-			<a href="https://www.instagram.com/dijana.pavlovic_/" target="_blank" class="icon"
+			<a href="https://www.instagram.com/diksipav/" target="_blank" class="icon"
 				><InstagramIcon /></a
 			>
 		</div>
