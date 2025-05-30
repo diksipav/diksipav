@@ -4,7 +4,7 @@ title: Networks and protocols 101 — how the Internet connects the world
 date: 2024-09-15
 desc: This post is the first in a series exploring the Internet and some networking protocols. In this introduction, we'll define what the Internet is, who its members are, and how they communicate with one another.
 seoDesc: This post explains what is the Internet, who are its members, and how they communicate between each other. 
-tags: '#software #internet #computer-networking'
+tags: '#software #computer-networking'
 ---
 
 # {title}

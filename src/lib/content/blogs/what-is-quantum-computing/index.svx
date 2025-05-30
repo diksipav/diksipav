@@ -1,10 +1,10 @@
 ---
 id: aaa7b1f0-0017-11ea-9149-d386e8a6bfaa
 title: What is quantum computing?
-date: 2025-05-29
+date: 2025-05-30
 desc: Imagine trying to design a life-saving drug by predicting exactly how complex molecules will interact, or optimizing global shipping routes with millions of variables in real time.
 seoDesc: Explore how quantum computing’s qubits, superposition, and entanglement are revolutionizing drug discovery, logistics, AI, and cryptography in the NISQ era.
-tags: ''
+tags: '#quantum-computing'
 ---
 
 # {title}
@@ -27,7 +27,7 @@ tackling intractable challenges today’s computers simply can’t touch.
 
 &nbsp;
 
-**Quantum computing** isn't just a faster version of the computers we use 
+`Quantum computing` isn't just a faster version of the computers we use 
 daily; it's a completely different paradigm that leverages the often 
 counter-intuitive yet powerful laws of quantum mechanics to solve problems 
 currently too complex for classical systems. With a surge in investment, rapid 
@@ -55,7 +55,7 @@ classical computers need to check grows astronomically, making them impractical.
 Think of trying to find the optimal configuration for a complex molecule;
 the number of states to simulate can be enormous.
 This is where the **quantum realm** offers a new path forward. Instead of bits, 
-quantum computers use **qubits**. A **qubit**, the heart of a quantum 
+quantum computers use ``qubits``. A qubit, the heart of a quantum 
 computer, can be a 0, a 1, or, crucially, a combination of both simultaneously 
 thanks to a principle called **superposition**. Imagine a spinning coin: while 
 it's in the air, it's neither heads nor tails but a blend of both possibilities
@@ -68,13 +68,13 @@ computers to explore a vast number of possibilities in parallel.
 &nbsp;
 
 The power lies in three key quantum phenomena that give quantum computers their 
-extraordinary capabilities. We already mentioned **Superposition** that allows 
+extraordinary capabilities. We already mentioned `superposition` that allows 
 qubits to exist in multiple states simultaneously. Then there's 
-**entanglement**, a phenomenon Albert Einstein famously (and somewhat 
-skeptically) called "spooky action at a distance." When two or more qubits are 
+`entanglement`, a phenomenon Albert Einstein famously (and somewhat 
+skeptically) called **"spooky action at a distance."** When two or more qubits are 
 entangled, their fates become intertwined. Measuring the state of one qubit 
 instantly influences the state of the other(s), regardless of the physical 
-distance separating them. Finally, **quantum interference** allows quantum algorithms to 
+distance separating them. Finally, `quantum interference` allows quantum algorithms to 
 amplify the probability of "correct" answers while canceling out "incorrect" 
 ones, much like noise-canceling headphones use destructive interference to 
 eliminate unwanted sound.
@@ -83,10 +83,10 @@ eliminate unwanted sound.
 
 At a high level, building and operating a quantum computer involves harnessing 
 these quantum phenomena. The **qubits** themselves can be realized in various 
-physical forms, or "modalities." Prominent approaches include superconducting 
-loops (favored by **IBM Quantum** and **Google Quantum AI**), trapped ions held 
-in place by electromagnetic fields(used by **IonQ** and Quantinuum), photons 
-(PsiQuantum, Xanadu), neutral atoms 
+physical forms, or "modalities." Prominent approaches include `superconducting 
+loops` (favored by **IBM Quantum** and **Google Quantum AI**), `trapped ions` held 
+in place by electromagnetic fields (used by **IonQ** and Quantinuum), `photons`
+(PsiQuantum, Xanadu), `neutral atoms`
 (Pasqal, QuEra), or
 the still-experimental **topological qubits** that Microsoft is developing. 
 Many of these systems require extreme conditions to operate, 
@@ -96,20 +96,20 @@ quantum states of the qubits from environmental disturbances.
 
 &nbsp;
 
-To perform computations, quantum computers use **quantum gates**, which are 
+To perform computations, quantum computers use `quantum gates`, which are 
 operations that manipulate the state of one or more qubits. These are analogous 
 to classical logic gates (like AND, OR, NOT) but are often reversible and can 
 perform more complex transformations, such as putting a qubit into 
-**superposition** (e.g., with a **Hadamard gate**) or creating **entanglement** 
-between qubits (e.g., with a **CNOT gate**). These gates are the building 
+**superposition** (e.g., with a `Hadamard gate`) or creating **entanglement** 
+between qubits (e.g., with a `CNOT gate`). These gates are the building 
 blocks 
-of **quantum algorithms** – specialized sets of instructions designed to 
+of `quantum algorithms` – specialized sets of instructions designed to 
 exploit 
-superposition and entanglement. Famous examples include **Shor's algorithm** 
+superposition and entanglement. Famous examples include `Shor's algorithm` 
 for 
 factoring large numbers (which has implications for cryptography) and 
-**Grover's 
-algorithm** for searching unsorted databases. **It's important to note that 
+`Grover's 
+algorithm` for searching unsorted databases. **It's important to note that 
 quantum computers don't speed up all tasks, but rather offer potentially 
 significant advantages for specific problem types.**
 
@@ -123,9 +123,9 @@ likely answer. And also, the power of quantum computation is incredibly
 fragile. 
 Qubits are extremely sensitive to their environment – any noise, vibration, or 
 temperature fluctuation can cause them to lose their quantum properties, a 
-phenomenon known as **decoherence**. This makes building stable, large-scale 
+phenomenon known as `decoherence`. This makes building stable, large-scale 
 quantum computers a monumental engineering challenge and underscores the 
-critical need for **quantum error correction (QEC)**. QEC aims to detect and 
+critical need for `quantum error correction (QEC)`. QEC aims to detect and 
 correct errors without disturbing the underlying quantum computation, a task 
 far 
 more complex than classical error correction.
@@ -139,10 +139,10 @@ into precisely timed microwave or laser pulses that manipulate the qubits. The
 software layer includes quantum programming languages and compilers that 
 optimize quantum circuits. Finally, the application layer provides interfaces 
 for 
-solving real-world problems. Companies like IBM, Google, and Amazon now offer 
+solving real-world problems. **Companies like IBM, Google, and Amazon now offer 
 cloud access to their quantum computers, making this technology accessible to 
 researchers and developers worldwide through platforms like IBM Quantum 
-Network, Google's Cirq, and AWS Braket.
+Network, Google's Cirq, and AWS Braket.**
 
 ## The quantum landscape: players, progress, and potential applications
 
@@ -216,7 +216,7 @@ one of the most discussed applications is in cryptography: **Shor's algorithm**
 poses a threat to current encryption standards like RSA and ECC. This has 
 spurred the urgent development of **post-quantum cryptography (PQC)** – new 
 cryptographic methods resistant to quantum attacks – alongside research into 
-quantum key distribution (QKD) for secure communication.
+`quantum key distribution (QKD)` for secure communication.
 
 &nbsp;
 
@@ -237,12 +237,12 @@ Despite the exciting progress, building large-scale, fault-tolerant quantum
 computers is a monumental undertaking with significant hurdles. **Scalability 
 and qubit quality** remain big challenges: we need not just more qubits, but 
 high-quality qubits that are stable, well-connected, and have low error rates.
-A typical quantum operation has an error rate of 0.1–1%, compared to classical computers with error rates below 10⁻¹².
-Achieving robust **fault tolerance** through effective **quantum error 
-correction** is arguably one of the biggest scientific and engineering 
-challenges, as it typically requires hundreds or thousands of physical qubits 
-to create
-a single, reliable "logical qubit." 
+A typical quantum operation has an error rate of 0.1–1%, compared to classical 
+computers with error rates below 10<sup>-12</sup>. Achieving robust 
+**fault tolerance** through effective **quantum error correction** is arguably 
+one of the biggest scientific and engineering challenges, as it typically 
+requires hundreds or thousands of physical qubits to createa single, reliable 
+"logical qubit." 
 
 &nbsp;
 
@@ -289,7 +289,7 @@ code-breaking.
 **Quantum computing** is more than just an incremental improvement; it's a 
 fundamental shift in how we process information, leveraging the unique 
 phenomena of
-the quantum world – **superposition**, **entanglement**, and interference – to 
+the quantum world – **superposition**, **entanglement**, and **interference** – to 
 tackle problems currently impossible for even the most powerful classical 
 machines. It represents a new frontier in science and technology, with the 
 potential to unlock unprecedented computational power.

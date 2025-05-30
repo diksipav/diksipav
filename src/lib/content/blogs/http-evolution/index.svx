@@ -4,7 +4,7 @@ title: HTTP evolution (part 1 - HTTP/1 & HTTP/2)
 date: 2024-09-21
 desc: Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like Youtube, Facebook, Google, CNN already use it!
 seoDesc: Explore the evolution of HTTP from its beginnings to HTTP/2 in this in-depth post. Learn about the key differences, improvements, and how these protocols impact web performance.
-tags: '#software #network'
+tags: '#software #computer-networking'
 ---
 
 # {title}

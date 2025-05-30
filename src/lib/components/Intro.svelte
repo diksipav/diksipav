@@ -10,9 +10,13 @@
 <div class="intro">
 	<img src={img} alt="Black and white me with ocean background." class="img" />
 	<div class="text">
-		<p>Hi, I'm a software engineer & digital nomad from Serbia.</p>
+		<p>Hi, I'm a <span class="highlight">software engineer</span> & digital nomad from Serbia.</p>
 		<p>Former (maybe future) electronics engineer.</p>
-		<p class="top-margin">This is where I share my insights on software, AI, and tech.</p>
+		<p class="top-margin">
+			This is where I share my insights on <span class="highlight">software</span>,
+			<span class="highlight">AI</span>, and
+			<span class="highlight">tech</span>.
+		</p>
 		<p class="top-margin">I enjoy immersing myself in nature & doing outdoorsy stuff.</p>
 		<p>I LOVE to read. & sometimes I draw.</p>
 		<div class="social-icons">
@@ -54,6 +58,11 @@
 
 			.top-margin {
 				margin-top: 16px;
+			}
+
+			.highlight {
+				font-family: 'THICCCBOI-Medium';
+				color: #c47a5b;
 			}
 		}
 
