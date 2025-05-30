@@ -85,9 +85,9 @@ At a high level, building and operating a quantum computer involves harnessing
 these quantum phenomena. The **qubits** themselves can be realized in various 
 physical forms, or "modalities." Prominent approaches include `superconducting 
 loops` (favored by **IBM Quantum** and **Google Quantum AI**), `trapped ions` held 
-in place by electromagnetic fields (used by **IonQ** and Quantinuum), `photons`
-(PsiQuantum, Xanadu), `neutral atoms`
-(Pasqal, QuEra), or
+in place by electromagnetic fields (used by **IonQ** and **Quantinuum**), `photons`
+(**PsiQuantum**, **Xanadu**), `neutral atoms`
+(**Pasqal**, **QuEra**), or
 the still-experimental **topological qubits** that Microsoft is developing. 
 Many of these systems require extreme conditions to operate, 
 such as temperatures near absolute zero and high vacuum, to protect the 
@@ -198,10 +198,10 @@ treatments for Alzheimer’s disease.
 Optimization problems, common in logistics, finance, and scheduling, could see 
 breakthroughs too; imagine optimizing global supply chains, designing more 
 efficient airline routes, or managing complex financial portfolios with far 
-greater insight. Goldman Sachs has developed quantum algorithms for derivatives 
+greater insight. **Goldman Sachs** has developed quantum algorithms for derivatives 
 pricing that could provide more accurate risk assessments in volatile markets. 
 Portfolio optimization, a problem that grows exponentially complex with more 
-assets, becomes manageable with quantum algorithms. JPMorgan Chase is exploring 
+assets, becomes manageable with quantum algorithms. **JPMorgan Chase** is exploring 
 quantum computing for fraud detection, leveraging quantum machine learning to
 identify subtle patterns in transaction data that classical algorithms might 
 miss. Many experts believe quantum computing will become an important tool in 
