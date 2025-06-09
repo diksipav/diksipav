@@ -1,3 +1,4 @@
+
 import { Camera } from 'lucide-react';
 const Header = () => {
   return <header className="relative z-10 p-6 md:p-8">
@@ -7,7 +8,6 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
               <Camera className="w-5 h-5 text-black" />
             </div>
-            <h1 className="text-2xl font-space font-bold">Photo Showcase</h1>
           </div>
         </div>
         
