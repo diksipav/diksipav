@@ -1,12 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import PhotoGrid from '@/components/PhotoGrid';
+import ImageModal from '@/components/ImageModal';
+import Header from '@/components/Header';
+import { Photo } from '@/types/photo';
 
 const Index = () => {
+  const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-showcase-dark">
+      <Header />
+      <PhotoGrid onPhotoSelect={setSelectedPhoto} />
+      <ImageModal 
+        photo={selectedPhoto} 
+        isOpen={!!selectedPhoto}
+        onClose={() => setSelectedPhoto(null)}
+      />
     </div>
   );
 };
