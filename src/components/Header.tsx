@@ -16,7 +16,7 @@ const Header = () => {
         
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-space font-bold mb-6 leading-tight">
-            Premium Photography
+            My photography moments
             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Collection
             </span>
