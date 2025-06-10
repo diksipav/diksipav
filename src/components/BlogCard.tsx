@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { BlogFrontmatter } from "@/hooks/useBlogs";
 
@@ -11,7 +12,7 @@ const BlogCard = ({ frontmatter }: BlogCardProps) => {
       "BlogCard received undefined or null frontmatter:",
       frontmatter
     );
-    return null; // Don't render if frontmatter is invalid
+    return null;
   }
 
   const description = frontmatter.description || "";
@@ -21,26 +22,31 @@ const BlogCard = ({ frontmatter }: BlogCardProps) => {
     .filter((word) => !word.startsWith("#"))
     .join(" ");
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const month = date.toLocaleDateString("en-US", { month: "short" });
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
+  };
+
   return (
-    <article className="flex mb-8 items-start">
-      <time className="text-sm text-gray-500 dark:text-gray-400 min-w-[80px] mr-8 pt-1 text-right">
-        {new Date(frontmatter.date)
-          .toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-          })
-          .replace(" ", ". ")}
-      </time>
+    <article className="mb-8">
+      <div className="flex items-start gap-4 text-sm text-muted-foreground mb-2">
+        <time>{formatDate(frontmatter.date)}</time>
+      </div>
       <Link
         to={`/read/${frontmatter.id}`}
-        className="flex-1 block hover:opacity-80 transition-opacity"
+        className="block hover:opacity-80 transition-opacity"
       >
-        <h2 className="text-xl font-bold mb-1 text-foreground">
+        <h2 className="text-xl font-bold mb-3 text-foreground leading-tight">
           {frontmatter.title}
         </h2>
+        <p className="text-base text-muted-foreground leading-relaxed mb-2">
+          {descriptionWithoutTags}
+        </p>
         {tags.length > 0 && (
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-muted-foreground">
             {tags.join(" ")}
           </p>
         )}

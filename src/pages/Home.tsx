@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import BlogCard from "@/components/BlogCard";
 import Intro from "@/components/Intro";
@@ -7,26 +8,26 @@ import Header from "@/components/Header";
 const mockBlogs = [
   {
     id: "1",
-    title: "Getting Started with EdgeDB",
+    title: "What is quantum computing?",
     description:
-      "A comprehensive guide to setting up and using EdgeDB in your projects",
-    date: "2024-03-20",
-    slug: "getting-started-with-edgedb",
+      "Imagine trying to design a life-saving drug by predicting exactly how complex molecules will... #quantum-computing",
+    date: "2024-05-30",
+    slug: "what-is-quantum-computing",
   },
   {
     id: "2",
-    title: "Digital Nomad Life in 2024",
-    description: "My experiences and tips for working remotely while traveling",
-    date: "2024-03-15",
-    slug: "digital-nomad-life-2024",
+    title: "HTTP evolution (part 1 - HTTP/1 & HTTP/2)",
+    description: "Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like... #software #computer-networking",
+    date: "2024-09-21",
+    slug: "http-evolution-part-1",
   },
   {
     id: "3",
-    title: "Building Modern Web Apps",
+    title: "Networks and protocols 101 — how the Internet connects the world",
     description:
-      "Best practices and tools for creating scalable web applications",
-    date: "2024-03-10",
-    slug: "building-modern-web-apps",
+      "This post is the first in a series exploring the Internet and some networking protocols. In this introduction,... #software #computer-networking",
+    date: "2024-09-15",
+    slug: "networks-and-protocols-101",
   },
 ];
 
@@ -45,27 +46,25 @@ const Home = () => {
         />
       </Helmet>
 
-      <div>
+      <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_500px_minmax(100px,1fr)_480px_1fr] xl:grid-cols-[1fr_512px_minmax(180px,1fr)_512px_1fr] gap-4">
-            <div className="lg:col-start-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+            {/* Left Column - Profile */}
+            <div className="flex flex-col items-center lg:items-start">
               <Intro />
             </div>
 
-            <div className="lg:col-start-4">
-              <div className="flex flex-col items-center mt-12">
-                <p className="text-sm text-gray-400 self-start pl-5 mb-4 hidden lg:block">
-                  Latest:
-                </p>
-                {mockBlogs.map((blog) => (
-                  <BlogCard key={blog.id} frontmatter={blog} />
-                ))}
+            {/* Right Column - Latest Posts */}
+            <div className="flex flex-col">
+              <div className="mb-8">
+                <p className="text-lg text-muted-foreground mb-8">Latest:</p>
+                <div className="space-y-8">
+                  {mockBlogs.map((blog) => (
+                    <BlogCard key={blog.id} frontmatter={blog} />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="text-center mt-8 lg:hidden">
-            <p className="text-gray-400">. . .</p>
           </div>
         </div>
       </div>
