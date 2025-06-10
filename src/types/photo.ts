@@ -1,10 +1,9 @@
-
 export interface Photo {
-  id: string;
+  id: number;
   title: string;
-  description: string;
+  desc: string;
   imageUrl: string;
-  colors: string[];
+  // colors: string[];
   aspectRatio: number;
   createdAt?: string;
 }
