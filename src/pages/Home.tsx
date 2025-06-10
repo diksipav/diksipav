@@ -1,8 +1,7 @@
-
 import { Helmet } from "react-helmet-async";
 import BlogCard from "@/components/BlogCard";
 import Intro from "@/components/Intro";
-import Header from "@/components/Header";
+import BackgroundCircles from "@/components/BackgroundCircles";
 
 // This would typically come from your data fetching layer
 const mockBlogs = [
@@ -17,7 +16,8 @@ const mockBlogs = [
   {
     id: "2",
     title: "HTTP evolution (part 1 - HTTP/1 & HTTP/2)",
-    description: "Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like... #software #computer-networking",
+    description:
+      "Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like... #software #computer-networking",
     date: "2024-09-21",
     slug: "http-evolution-part-1",
   },
@@ -46,11 +46,12 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div>
+        <BackgroundCircles />
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Column - Profile */}
-            <div className="flex flex-col items-center lg:items-start">
+            <div className="flex flex-col items-center justify-center">
               <Intro />
             </div>
 
