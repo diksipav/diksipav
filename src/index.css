@@ -1,29 +1,90 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Photo Showcase Design System */
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("@/assets/fonts/THICCCBOI-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
     --background: 11 11 11; /* #0B0B0B */
     --foreground: 0 0% 100%; /* #FFFFFF */
 
-    --card: 17 17 17; /* Slightly lighter than background */
+    --card: 20 6% 15%; /* Slightly lighter than background */
     --card-foreground: 0 0% 100%;
 
     --popover: 17 17 17;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 51 100% 50%; /* Gold #FFD700 */
+    --primary: 16 100% 66%;
     --primary-foreground: 11 11 11;
 
-    --secondary: 322 87% 68%; /* Pink #F472B6 */
+    --secondary: 262 91% 66%; /* Purple #8B5CF6 */
     --secondary-foreground: 11 11 11;
 
     --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 80%;
 
     --accent: 51 100% 50%;
     --accent-foreground: 11 11 11;
@@ -36,6 +97,139 @@
     --ring: 51 100% 50%;
 
     --radius: 0.75rem;
+
+    --link-gray: #666666;
+    --purple: #8b5cf6;
+  }
+
+  [data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #0b0b0b;
+    --text-color: #ffffff;
+  }
+
+  p,
+  a,
+  small,
+  pre,
+  ul li {
+    @apply text-muted-foreground font-thicccboi font-normal box-border;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-foreground font-thicccboi font-bold leading-tight m-0; /* Using text-foreground for dynamic color */
+  }
+
+  h4 {
+    @apply text-muted-foreground;
+  }
+
+  h1 {
+    @apply text-[27px] py-1.5 px-0 pb-6;
+    color: hsl(
+      var(--foreground)
+    ); /* Ensure heading color matches foreground for now */
+    max-width: 470px;
+  }
+
+  h2 {
+    @apply text-[24px] mt-8 mb-4;
+    color: hsl(var(--foreground));
+  }
+
+  h3 {
+    @apply text-[21px] mt-8 mb-4;
+    color: hsl(var(--foreground));
+  }
+
+  h4 {
+    @apply text-[18px] mt-8 mb-3;
+  }
+
+  h5 {
+    @apply text-[17px] pt-2 pb-2;
+  }
+
+  a {
+    color: hsl(var(--secondary));
+    @apply transition-colors duration-200
+      no-underline px-0.5;
+
+    &:hover {
+      border-bottom: 1px solid hsl(var(--secondary));
+    }
+  }
+
+  hr {
+    @apply mb-4;
+  }
+
+  small {
+    @apply text-sm text-muted-foreground;
+  }
+
+  code {
+    @apply px-0.5 py-px text-[98%] bg-card rounded text-foreground font-thicccboi font-medium leading-tight m-0;
+    color: #c47a5b;
+  }
+
+  pre[class*="language-"] {
+    position: static;
+    @apply rounded-none sm:rounded-md;
+    width: min(
+      calc(100vw - 1px),
+      556px
+    ); /* Specific width from original Svelte CSS */
+
+    code[class*="language-"] {
+      @apply p-0 text-[15px] sm:text-base; /* Font size adjustments */
+    }
+  }
+
+  .light-theme pre[class*="language-"] {
+    margin: 16px -24px 28px -24px;
+    background: hsl(var(--card));
+    border: none;
+
+    code[class*="language-"] {
+      background: hsl(var(--card));
+    }
+  }
+
+  .dark-theme pre[class*="language-"] {
+    margin: 16px -24px 28px -24px;
+    background: hsl(var(--card));
+    border: none;
+
+    code[class*="language-"] {
+      background: hsl(var(--card));
+    }
+  }
+
+  ul {
+    @apply pl-7 mb-7 list-disc;
+
+    li {
+      @apply text-base leading-snug;
+    }
+
+    li:not(:last-child) {
+      @apply pb-3.5;
+    }
   }
 }
 
@@ -46,10 +240,15 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background-color: #0B0B0B;
+    background-color: #0b0b0b;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-space font-bold;
   }
 }
@@ -83,5 +282,102 @@
     backdrop-filter: blur(20px);
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .note {
+    border: 1px solid hsl(var(--border)); /* Using border color variable */
+    @apply my-6 -mx-6 px-6 pt-5 pb-3 bg-card rounded-none sm:rounded-md shadow-lg; /* Converted properties */
+    box-shadow: 0px 24px 26px -26px rgba(0, 0, 0, 0.1); /* Specific shadow */
+    font-style: italic;
+
+    p:first-of-type::before {
+      content: "NOTE:";
+      font-style: normal;
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      padding-right: 4px;
+      color: hsl(var(--primary)); /* Using primary color for note prefix */
+      font-family: "THICCCBOI-Medium";
+    }
+  }
+
+  .md-images {
+    @apply flex gap-14 justify-center my-0 -mx-6;
+    @apply flex-col sm:flex-row;
+    align-items: center;
+
+    p {
+      @apply mb-0;
+    }
+
+    small {
+      @apply mb-3 pl-6 italic relative bottom-1;
+    }
+
+    img {
+      @apply max-w-[200px] rounded-md mt-5;
+    }
+  }
+
+  .img {
+    @apply w-[590px];
+  }
+
+  .ending {
+    border-top: 1px solid hsl(var(--border)); /* Using border color variable */
+    @apply pt-4 mt-4;
+
+    pre {
+      @apply leading-relaxed mt-0;
+    }
+  }
+
+  .prose img {
+    max-width: calc(100% + 48px);
+    @apply mb-8 -ml-6 -mr-6 rounded-md;
+  }
+}
+
+@layer utilities {
+  .grid-template-areas-left-main-right {
+    grid-template-areas: "left main right";
+  }
+}
+
+@media (min-width: 1440px) {
+  p {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4,
+  h5 {
+    font-size: 20px;
+  }
+
+  small {
+    font-size: 13px;
+  }
+
+  pre {
+    font-size: 16px;
+  }
+
+  ul {
+    li {
+      font-size: 18px;
+    }
   }
 }

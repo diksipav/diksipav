@@ -1,23 +1,28 @@
-import { Camera } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Nav from "./Nav";
+
 const Header = () => {
-  return <header className="relative z-10 p-6 md:p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
+  return (
+    <div
+      className={`sticky top-0 z-20 bg-[#0b0b0b] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300
+      `}
+    >
+      <div className="relative">
+        <div className="flex justify-between items-center relative h-full">
+          <Link
+            to="/"
+            className="text-purple font-thicccboi text-[26px] leading-7 font-bold sm:text-[32px] sm:leading-10 shadow-[0_0_15px_rgba(11,11,11,0.3)] px-11 py-5 rounded-br-md bg-[#0b0b0b] h-full hover:border-b-0 transition-all duration-300"
+          >
+            dijana pavlović
+          </Link>
+          <div className="flex items-center gap-6 h-full">
+            <Nav />
           </div>
         </div>
-        
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-space font-bold mb-6 leading-tight">
-            Premium Photography
-            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">moments</span>
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Discover and download high-quality photographs for your creative projects. 
-            Each image is carefully curated and available for free use.
-          </p>
-        </div>
       </div>
-    </header>;
+    </div>
+  );
 };
+
 export default Header;

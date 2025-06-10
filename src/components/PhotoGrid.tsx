@@ -1,8 +1,7 @@
-
-import { useState, useEffect, useRef } from 'react';
-import { Download } from 'lucide-react';
-import { PhotoGridProps, Photo } from '@/types/photo';
-import { mockPhotos } from '@/data/mockPhotos';
+import { useState, useEffect, useRef } from "react";
+import { Download } from "lucide-react";
+import { PhotoGridProps, Photo } from "@/types/photo";
+import { supabase } from "@/lib/supabase";
 
 const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -22,11 +21,30 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
 
   const loadPhotos = async () => {
     setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      setPhotos(mockPhotos);
+    try {
+      const { data, error } = await supabase.from("photos").select("*");
+      // .order("created_at", { ascending: false });
+      console.log("Didi", data);
+      if (error) {
+        throw error;
+      }
+
+      // Transform Supabase data to match Photo type
+      const transformedPhotos = data.map((photo) => ({
+        id: photo.id,
+        title: photo.title,
+        desc: photo.desc,
+        imageUrl: photo.image_url,
+        aspectRatio: photo.aspect_ratio || 1,
+        createdAt: photo.created_at,
+      }));
+
+      setPhotos(transformedPhotos);
+    } catch (error) {
+      console.error("Error loading photos:", error);
+    } finally {
       setIsLoading(false);
-    }, 500);
+    }
   };
 
   const loadMorePhotos = () => {
@@ -34,36 +52,36 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
       loadedPhotosCount.current,
       loadedPhotosCount.current + batchSize
     );
-    
+
     if (nextBatch.length > 0) {
-      setVisiblePhotos(prev => [...prev, ...nextBatch]);
+      setVisiblePhotos((prev) => [...prev, ...nextBatch]);
       loadedPhotosCount.current += nextBatch.length;
     }
   };
 
   const handleScroll = () => {
     if (!gridRef.current) return;
-    
+
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    
+
     if (scrollTop + clientHeight >= scrollHeight - 1000) {
       loadMorePhotos();
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [photos]);
 
   const downloadImage = async (photo: Photo, e: React.MouseEvent) => {
     e.stopPropagation();
-    
+
     try {
       const response = await fetch(photo.imageUrl);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.href = url;
       a.download = `${photo.title}.jpg`;
       document.body.appendChild(a);
@@ -71,13 +89,13 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
-      console.error('Download failed:', error);
+      console.error("Download failed:", error);
     }
   };
 
   const getGridSpan = (aspectRatio: number) => {
-    if (aspectRatio > 1.5) return 20; // Landscape
-    if (aspectRatio < 0.8) return 35; // Portrait
+    if (aspectRatio > 1.5) return 8; // Landscape
+    if (aspectRatio < 0.8) return 16; // Portrait
     return 25; // Square-ish
   };
 
@@ -91,15 +109,17 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
 
   return (
     <div className="px-6 md:px-8 pb-20">
-      <div className="max-w-7xl mx-auto">
-        <div ref={gridRef} className="masonry-grid">
+      <div className="container max-w-[2260px] mx-auto px-0">
+        <div ref={gridRef} className="masonry-grid gap-5">
           {visiblePhotos.map((photo) => (
             <div
               key={photo.id}
-              className="masonry-item cursor-pointer group relative overflow-hidden rounded-xl"
-              style={{
-                '--span': getGridSpan(photo.aspectRatio)
-              } as React.CSSProperties}
+              className="masonry-item cursor-pointer group relative overflow-hidden rounded-md"
+              style={
+                {
+                  "--span": getGridSpan(photo.aspectRatio),
+                } as React.CSSProperties
+              }
               onClick={() => onPhotoSelect(photo)}
             >
               <img
@@ -108,26 +128,29 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
-              
+
               {/* Hover Overlay */}
               <div className="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-between p-4">
-                <div className="text-white">
-                  <h3 className="font-space font-semibold text-lg mb-1">{photo.title}</h3>
-                  <p className="text-sm text-gray-200 line-clamp-2">{photo.description}</p>
+                <div className="text-white mr-2">
+                  <h3 className="font-space font-semibold text-lg mb-1">
+                    {photo.title.replace(/-/g, " ")}
+                  </h3>
+                  <p className="text-sm text-gray-200 line-clamp-2 m-0">
+                    {photo.desc}
+                  </p>
                 </div>
-                
+
                 <button
                   onClick={(e) => downloadImage(photo, e)}
-                  className="flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                  className="flex items-center gap-2 bg-gray/50 px-2 py-2 rounded-sm font-medium hover:bg-gray/80 transition-colors duration-300"
                 >
                   <Download className="w-4 h-4" />
-                  Download
                 </button>
               </div>
             </div>
           ))}
         </div>
-        
+
         {isLoading && visiblePhotos.length > 0 && (
           <div className="flex justify-center mt-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
