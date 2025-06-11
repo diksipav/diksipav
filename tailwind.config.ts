@@ -27,9 +27,6 @@ export default {
       xxxl: "1920px",
     },
     extend: {
-      gridTemplateAreas: {
-        "left-main-right": '"left main right"',
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

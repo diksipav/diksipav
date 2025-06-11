@@ -34,36 +34,30 @@ const Intro = () => {
       />
 
       <div className="mb-4">
-        <p className="text-lg text-muted-foreground mb-2">
-          Hi, I'm a <span className="text-primary">software engineer</span> &
-          digital nomad from Serbia.
+        <h1 className="">AI & Software Engineer | Consultant</h1>
+        <p className="text-lg mb-4">
+          Former (and maybe future) electronics engineer.
         </p>
-        <p className="text-lg text-muted-foreground mb-4">
-          Former (maybe future) electronics engineer.
-        </p>
-        <p className="text-lg text-muted-foreground mb-4">
-          This is where I share my insights on{" "}
+        <p className="text-lg  mb-4">
+          Here, I share my insights on{" "}
           <span className="text-primary">software</span>,{" "}
-          <span className="text-primary">AI</span>, and{" "}
+          <span className="text-primary">AI</span>, and all things{" "}
           <span className="text-primary">tech</span>.
         </p>
-        <p className="text-lg text-muted-foreground mb-2">
-          I enjoy immersing myself in nature & doing outdoorsy stuff.
-        </p>
-        <p className="text-lg text-muted-foreground">
-          I LOVE to read, & sometimes I draw.
+        <p className="text-lg mb-4">
+          I love nature and anything that gets me outside.
         </p>
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 self-start">
         {socialLinks.map((social) => (
           <a
             key={social.label}
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            className="text-muted-foreground hover:text-muted-foreground hover:border-none transition-colors duration-200"
             aria-label={social.label}
           >
             <social.icon />

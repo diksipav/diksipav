@@ -14,9 +14,9 @@ export const useBlogs = () => {
   useEffect(() => {
     const loadBlogs = async () => {
       try {
-        // Import all markdown files from the blogs directory
         const blogFiles = import.meta.glob("/src/content/blogs/*.md", {
-          as: "raw",
+          query: "?raw",
+          import: "default",
         });
 
         const blogPromises = Object.entries(blogFiles).map(

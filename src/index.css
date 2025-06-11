@@ -68,10 +68,10 @@
 
 @layer base {
   :root {
-    --background: 11 11 11; /* #0B0B0B */
-    --foreground: 0 0% 100%; /* #FFFFFF */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%; /* #FFFFFF */
 
-    --card: 20 6% 15%; /* Slightly lighter than background */
+    --card: 20 6% 15%;
     --card-foreground: 0 0% 100%;
 
     --popover: 17 17 17;
@@ -84,7 +84,7 @@
     --secondary-foreground: 11 11 11;
 
     --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 80%;
+    --muted-foreground: 0 0% 82%;
 
     --accent: 51 100% 50%;
     --accent-foreground: 11 11 11;
@@ -100,14 +100,6 @@
 
     --link-gray: #666666;
     --purple: #8b5cf6;
-  }
-
-  [data-theme="light"] {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-  }
-
-  [data-theme="dark"] {
     --bg-color: #0b0b0b;
     --text-color: #ffffff;
   }
@@ -117,7 +109,10 @@
   small,
   pre,
   ul li {
-    @apply text-muted-foreground font-thicccboi font-normal box-border;
+    color: hsl(var(--muted-foreground));
+    font-family: THICCCBOI, Arial, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
   }
 
   p {
@@ -131,7 +126,7 @@
   h3,
   h4,
   h5 {
-    @apply text-foreground font-thicccboi font-bold leading-tight m-0; /* Using text-foreground for dynamic color */
+    @apply text-foreground font-thicccboi font-bold leading-tight m-0;
   }
 
   h4 {
@@ -139,43 +134,45 @@
   }
 
   h1 {
-    @apply text-[27px] py-1.5 px-0 pb-6;
-    color: hsl(
-      var(--foreground)
-    ); /* Ensure heading color matches foreground for now */
+    @apply text-4xl py-1.5 px-0 pb-6;
+    color: hsl(var(--foreground));
     max-width: 470px;
   }
 
   h2 {
-    @apply text-[24px] mt-8 mb-4;
+    @apply mt-8 mb-4;
+    font-size: 24px;
     color: hsl(var(--foreground));
   }
 
   h3 {
-    @apply text-[21px] mt-8 mb-4;
+    @apply mt-8 mb-4;
+    font-size: 21px;
     color: hsl(var(--foreground));
   }
 
   h4 {
-    @apply text-[18px] mt-8 mb-3;
+    @apply mt-8 mb-3;
+    font-size: 18px;
   }
 
   h5 {
-    @apply text-[17px] pt-2 pb-2;
+    @apply pt-2 pb-2;
+    font-size: 17px;
   }
 
   a {
     color: hsl(var(--secondary));
-    @apply transition-colors duration-200
-      no-underline px-0.5;
+    border-bottom: 1px solid transparent;
+    @apply transition-colors duration-200 no-underline px-0.5;
+  }
 
-    &:hover {
-      border-bottom: 1px solid hsl(var(--secondary));
-    }
+  a:hover {
+    border-bottom: 1px solid hsl(var(--secondary));
   }
 
   hr {
-    @apply mb-4;
+    margin-bottom: 1rem;
   }
 
   small {
@@ -183,64 +180,50 @@
   }
 
   code {
-    @apply px-0.5 py-px text-[98%] bg-card rounded text-foreground font-thicccboi font-medium leading-tight m-0;
+    @apply px-0.5 py-px  bg-card rounded font-thicccboi font-medium leading-tight m-0;
     color: #c47a5b;
+    font-size: 98%;
   }
 
   pre[class*="language-"] {
     position: static;
-    @apply rounded-none sm:rounded-md;
-    width: min(
-      calc(100vw - 1px),
-      556px
-    ); /* Specific width from original Svelte CSS */
-
-    code[class*="language-"] {
-      @apply p-0 text-[15px] sm:text-base; /* Font size adjustments */
-    }
+    border-radius: 0;
+    width: min(calc(100vw - 1px), 556px);
   }
 
-  .light-theme pre[class*="language-"] {
+  pre[class*="language-"] code[class*="language-"] {
+    @apply p-0 sm:text-base;
+    font-size: 15px;
+  }
+
+  pre[class*="language-"] {
     margin: 16px -24px 28px -24px;
     background: hsl(var(--card));
     border: none;
-
-    code[class*="language-"] {
-      background: hsl(var(--card));
-    }
   }
 
-  .dark-theme pre[class*="language-"] {
-    margin: 16px -24px 28px -24px;
+  pre[class*="language-"] code[class*="language-"] {
     background: hsl(var(--card));
-    border: none;
-
-    code[class*="language-"] {
-      background: hsl(var(--card));
-    }
   }
 
   ul {
     @apply pl-7 mb-7 list-disc;
-
-    li {
-      @apply text-base leading-snug;
-    }
-
-    li:not(:last-child) {
-      @apply pb-3.5;
-    }
   }
-}
 
-@layer base {
+  ul li {
+    @apply text-base leading-snug;
+  }
+
+  ul li:not(:last-child) {
+    padding-bottom: 0.875rem;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground font-inter;
-    background-color: #0b0b0b;
   }
 
   h1,
@@ -321,7 +304,7 @@
   }
 
   .img {
-    @apply w-[590px];
+    width: 590px;
   }
 
   .ending {
@@ -336,12 +319,6 @@
   .prose img {
     max-width: calc(100% + 48px);
     @apply mb-8 -ml-6 -mr-6 rounded-md;
-  }
-}
-
-@layer utilities {
-  .grid-template-areas-left-main-right {
-    grid-template-areas: "left main right";
   }
 }
 

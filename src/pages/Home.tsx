@@ -36,7 +36,7 @@ const Home = () => {
     <>
       <Helmet>
         <title>
-          Software Engineer & Digital Nomad | Insights on Tech & Life
+          Software Engineer & Consultants | Insights on Tech, AI & Software
         </title>
         <meta
           name="description"
@@ -46,7 +46,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div>
+      <div className="min-h-[calc(100vh-80px-35px)] flex justify-center items-center">
         <BackgroundCircles />
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
@@ -56,9 +56,9 @@ const Home = () => {
             </div>
 
             {/* Right Column - Latest Posts */}
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center">
               <div className="mb-8">
-                <p className="text-lg text-muted-foreground mb-8">Latest:</p>
+                <p className="text-muted-foreground mb-4">Latest:</p>
                 <div className="space-y-8">
                   {mockBlogs.map((blog) => (
                     <BlogCard key={blog.id} frontmatter={blog} />

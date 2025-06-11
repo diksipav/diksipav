@@ -7,7 +7,7 @@ const Read = () => {
   const { blogs } = useBlogs();
 
   return (
-    <>
+    <Layout>
       <Helmet>
         <title>
           Blog posts on software engineering, digital nomad life and my personal
@@ -20,17 +20,14 @@ const Read = () => {
           also write about digital nomad life and personal philosophies."
         />
       </Helmet>
-
-      <Layout>
-        <div className="flex justify-center py-10">
-          <div className="w-full max-w-3xl">
-            {blogs.map((frontmatter) => (
-              <BlogCard key={frontmatter.id} frontmatter={frontmatter} />
-            ))}
-          </div>
+      <div className="col-start-2 flex justify-center py-10">
+        <div className="w-full max-w-3xl">
+          {blogs.map((frontmatter) => (
+            <BlogCard key={frontmatter.id} frontmatter={frontmatter} />
+          ))}
         </div>
-      </Layout>
-    </>
+      </div>
+    </Layout>
   );
 };
 

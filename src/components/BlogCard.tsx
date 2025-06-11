@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { BlogFrontmatter } from "@/hooks/useBlogs";
 
@@ -31,24 +30,22 @@ const BlogCard = ({ frontmatter }: BlogCardProps) => {
   };
 
   return (
-    <article className="mb-8">
-      <div className="flex items-start gap-4 text-sm text-muted-foreground mb-2">
+    <article className="mb-4 flex">
+      <div className="flex items-start gap-4 text-xs text-[#9E9E9E] mb-2 mt-1">
         <time>{formatDate(frontmatter.date)}</time>
       </div>
       <Link
         to={`/read/${frontmatter.id}`}
-        className="block hover:opacity-80 transition-opacity"
+        className="block hover:opacity-80 transition-opacity border-none hover:border-none"
       >
-        <h2 className="text-xl font-bold mb-3 text-foreground leading-tight">
+        <h2 className="text-xl font-bold mb-3 mt-0 text-foreground leading-tight">
           {frontmatter.title}
         </h2>
-        <p className="text-base text-muted-foreground leading-relaxed mb-2">
+        <p className="text-base leading-relaxed mb-2">
           {descriptionWithoutTags}
         </p>
         {tags.length > 0 && (
-          <p className="text-sm text-muted-foreground">
-            {tags.join(" ")}
-          </p>
+          <p className="text-sm  mb-0 text-[#9E9E9E]">{tags.join(" ")}</p>
         )}
       </Link>
     </article>
