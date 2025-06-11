@@ -48,8 +48,8 @@ const Home = () => {
       </Helmet>
 
       <div className="min-h-[calc(100vh-80px-35px)] flex justify-center items-center relative overflow-hidden">
-        {/* Smooth gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2d1b4e] via-[#1a1625] to-background opacity-80"></div>
+        {/* Smooth gradient background - darker version */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0f2e] via-[#0f0a15] to-[#0a0a0a] opacity-90"></div>
         
         <BackgroundCircles />
         <div className="container mx-auto px-4 py-8 relative z-10">
