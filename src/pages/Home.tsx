@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import BlogCard from "@/components/BlogCard";
 import Intro from "@/components/Intro";
@@ -46,9 +47,12 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="min-h-[calc(100vh-80px-35px)] flex justify-center items-center">
+      <div className="min-h-[calc(100vh-80px-35px)] flex justify-center items-center relative overflow-hidden">
+        {/* Smooth gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2d1b4e] via-[#1a1625] to-background opacity-80"></div>
+        
         <BackgroundCircles />
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Left Column - Profile */}
             <div className="flex flex-col items-center justify-center">
