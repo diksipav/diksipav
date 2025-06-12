@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Download } from "lucide-react";
 import { PhotoGridProps, Photo } from "@/types/photo";
 import { supabase } from "@/lib/supabase";
+import { useIsMobile } from "@/hooks/useMobile";
 
 const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -93,7 +94,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
     }
   };
 
-  const isMobile = window.innerWidth < 768;
+  const isMobile = useIsMobile();
 
   const getGridSpan = (aspectRatio: number) => {
     if (aspectRatio > 1.5) return isMobile ? 6 : 8; // Landscape

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { X, Download, Palette } from "lucide-react";
+import { X, Download } from "lucide-react";
 import { ImageModalProps } from "@/types/photo";
 
 const ImageModal = ({ photo, isOpen, onClose }: ImageModalProps) => {
