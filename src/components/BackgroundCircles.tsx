@@ -1,62 +1,47 @@
-import { useEffect, useState } from "react";
+// components/BackgroundCircles.tsx
+import type { CSSProperties, FC } from "react";
 
-interface Circle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  opacity: number;
-  duration: number;
-}
+const CIRCLES = 15;
 
-const BackgroundCircles = () => {
-  const [circles, setCircles] = useState<Circle[]>([]);
+/* Helper for random numbers in a range */
+const r = (min: number, max: number) => Math.random() * (max - min) + min;
 
-  useEffect(() => {
-    // Create initial circles
-    const initialCircles: Circle[] = Array.from({ length: 15 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 20 + 10, // Random size between 10 and 30
-      opacity: Math.random() * 0.1 + 0.05, // Random opacity between 0.05 and 0.15
-      duration: Math.random() * 20 + 20, // Random duration between 20 and 40 seconds
-    }));
+const BackgroundCircles: FC = () => (
+  <div className="fixed inset-0 z-10 pointer-events-none overflow-hidden">
+    {Array.from({ length: CIRCLES }).map((_, i) => {
+      const size = r(20, 40); // px
+      const style: CSSProperties = {
+        /* Start anywhere (-10 % lets some spawn slightly off-screen) */
+        top: `${r(-10, 90)}%`,
+        left: `${r(-10, 90)}%`,
+        width: size,
+        height: size,
+        opacity: r(0.12, 0.25),
 
-    setCircles(initialCircles);
+        /* ③  Per-circle motion path (in pixels) */
+        ["--x1" as any]: `${r(-70, 70)}px`,
+        ["--y1" as any]: `${r(-70, 70)}px`,
+        ["--x2" as any]: `${r(-70, 70)}px`,
+        ["--y2" as any]: `${r(-70, 70)}px`,
+        ["--x3" as any]: `${r(-70, 70)}px`,
+        ["--y3" as any]: `${r(-70, 70)}px`,
 
-    // Animate circles
-    const interval = setInterval(() => {
-      setCircles((prevCircles) =>
-        prevCircles.map((circle) => ({
-          ...circle,
-          x: circle.x + (Math.random() - 0.5) * 2,
-          y: circle.y + (Math.random() - 0.5) * 2,
-        }))
-      );
-    }, 100);
+        /* ④  Per-circle speed   (8–13 s = visibly faster) */
+        ["--duration" as any]: `${r(10, 15)}s`,
 
-    return () => clearInterval(interval);
-  }, []);
+        /* Optional: slightly softer edges */
+        filter: "blur(0.5px)",
+      };
 
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 p-24">
-      {circles.map((circle) => (
+      return (
         <div
-          key={circle.id}
-          className="absolute rounded-full bg-purple"
-          style={{
-            left: `${circle.x}%`,
-            top: `${circle.y}%`,
-            width: `${circle.size}px`,
-            height: `${circle.size}px`,
-            opacity: circle.opacity,
-            transition: `all ${circle.duration}s ease-in-out`,
-          }}
+          key={i}
+          className="absolute rounded-full bg-secondary animate-drift"
+          style={style}
         />
-      ))}
-    </div>
-  );
-};
+      );
+    })}
+  </div>
+);
 
 export default BackgroundCircles;

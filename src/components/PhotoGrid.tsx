@@ -93,9 +93,11 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
     }
   };
 
+  const isMobile = window.innerWidth < 768;
+
   const getGridSpan = (aspectRatio: number) => {
-    if (aspectRatio > 1.5) return 8; // Landscape
-    if (aspectRatio < 0.8) return 16; // Portrait
+    if (aspectRatio > 1.5) return isMobile ? 6 : 8; // Landscape
+    if (aspectRatio < 0.8) return isMobile ? 13 : 16; // Portrait
     return 25; // Square-ish
   };
 
@@ -108,13 +110,13 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   }
 
   return (
-    <div className="px-6 md:px-8 pb-20">
+    <div className="pb-20">
       <div className="container max-w-[2260px] mx-auto px-0">
         <div ref={gridRef} className="masonry-grid gap-5">
           {visiblePhotos.map((photo) => (
             <div
               key={photo.id}
-              className="masonry-item cursor-pointer group relative overflow-hidden rounded-md"
+              className="masonry-item cursor-pointer group relative overflow-hidden rounded-sm"
               style={
                 {
                   "--span": getGridSpan(photo.aspectRatio),

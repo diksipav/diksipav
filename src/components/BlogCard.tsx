@@ -1,25 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BlogFrontmatter } from "@/hooks/useBlogs";
+import { createSlug } from "@/lib/utils";
 
 interface BlogCardProps {
   frontmatter: BlogFrontmatter;
 }
 
 const BlogCard = ({ frontmatter }: BlogCardProps) => {
-  if (!frontmatter) {
-    console.error(
-      "BlogCard received undefined or null frontmatter:",
-      frontmatter
-    );
-    return null;
-  }
-
-  const description = frontmatter.description || "";
-  const tags = description.split(" ").filter((word) => word.startsWith("#"));
-  const descriptionWithoutTags = description
-    .split(" ")
-    .filter((word) => !word.startsWith("#"))
-    .join(" ");
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -28,25 +17,25 @@ const BlogCard = ({ frontmatter }: BlogCardProps) => {
     const year = date.getFullYear();
     return `${month} ${day}, ${year}`;
   };
-
+  console.log("didi", frontmatter.title);
   return (
-    <article className="mb-4 flex">
-      <div className="flex items-start gap-4 text-xs text-[#9E9E9E] mb-2 mt-1">
+    <article className="flex">
+      <div className="flex items-start gap-4 text-xs text-[#ababab] mb-2 mt-2 mr-2 max-w-[54px] shrink-0">
         <time>{formatDate(frontmatter.date)}</time>
       </div>
       <Link
-        to={`/read/${frontmatter.id}`}
+        to={`/articles/${createSlug(frontmatter.title)}`}
         className="block hover:opacity-80 transition-opacity border-none hover:border-none"
       >
-        <h2 className="text-xl font-bold mb-3 mt-0 text-foreground leading-tight">
+        <h2 className="text-xl font-bold my-0 text-foreground leading-tight">
           {frontmatter.title}
         </h2>
-        <p className="text-base leading-relaxed mb-2">
-          {descriptionWithoutTags}
-        </p>
-        {tags.length > 0 && (
-          <p className="text-sm  mb-0 text-[#9E9E9E]">{tags.join(" ")}</p>
+        {isHomePage && (
+          <p className="text-base leading-relaxed mt-3 mb-1 line-clamp-2">
+            {frontmatter.desc}
+          </p>
         )}
+        <p className="text-sm mt-1 mb-0 text-[#ababab]">{frontmatter.tags}</p>
       </Link>
     </article>
   );

@@ -1,6 +1,6 @@
 ---
 id: 1a37b1f0-0017-11ea-9149-d386e8a6bfaa
-title: HTTP evolution
+title: HTTP evolution (part 1 - HTTP/1 & HTTP/2)
 date: 2024-09-21
 desc: Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like Youtube, Facebook, Google, CNN already use it!
 seoDesc: Explore the evolution of HTTP from its beginnings to HTTP/2 in this in-depth post. Learn about the key differences, improvements, and how these protocols impact web performance.
@@ -225,7 +225,7 @@ these newer environments, where latency and packet loss are more common.
   - [ByteByteGo HTTP deep dive](https://blog.bytebytego.com/p/http1-vs-http2-vs-http3-a-deep-dive)
   - [Swadhin Pattnaik: HTTP evolution](https://www.linkedin.com/pulse/http-10-vs-11-20-30-swadhin-pattnaik/)
   - [MDN: Evolution of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
-  - WWW. Endless conversations with GPT. 💪🏽💪🏽
+  - WWW and endless conversations with GPT. 💪🏽💪🏽
 
 ---
 

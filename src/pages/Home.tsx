@@ -1,38 +1,11 @@
-
 import { Helmet } from "react-helmet-async";
 import BlogCard from "@/components/BlogCard";
 import Intro from "@/components/Intro";
-import BackgroundCircles from "@/components/BackgroundCircles";
-
-// This would typically come from your data fetching layer
-const mockBlogs = [
-  {
-    id: "1",
-    title: "What is quantum computing?",
-    description:
-      "Imagine trying to design a life-saving drug by predicting exactly how complex molecules will... #quantum-computing",
-    date: "2024-05-30",
-    slug: "what-is-quantum-computing",
-  },
-  {
-    id: "2",
-    title: "HTTP evolution (part 1 - HTTP/1 & HTTP/2)",
-    description:
-      "Did you know that HTTP/3 is available? The majority of big browsers support it, and some big domains like... #software #computer-networking",
-    date: "2024-09-21",
-    slug: "http-evolution-part-1",
-  },
-  {
-    id: "3",
-    title: "Networks and protocols 101 — how the Internet connects the world",
-    description:
-      "This post is the first in a series exploring the Internet and some networking protocols. In this introduction,... #software #computer-networking",
-    date: "2024-09-15",
-    slug: "networks-and-protocols-101",
-  },
-];
+import { useBlogs } from "@/hooks/useBlogs";
 
 const Home = () => {
+  const { blogs } = useBlogs();
+  console.log("bb", blogs);
   return (
     <>
       <Helmet>
@@ -47,25 +20,21 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className="min-h-[calc(100vh-80px-35px)] flex justify-center items-center relative overflow-hidden">
-        {/* Smooth gradient background - darker version */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0f2e] via-[#0f0a15] to-[#0a0a0a] opacity-90"></div>
-        
-        <BackgroundCircles />
-        <div className="container mx-auto px-4 py-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+      <div className="px-5 sm:px-11 min-h-[calc(100vh-80px-35px)] flex justify-center items-center relative overflow-hidden">
+        <div className="container mx-auto px-0 md:px-4 py-8 relative z-10">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-24 2xl:gap-40 max-w-6xl mx-auto">
             {/* Left Column - Profile */}
             <div className="flex flex-col items-center justify-center">
               <Intro />
             </div>
 
             {/* Right Column - Latest Posts */}
-            <div className="flex flex-col justify-center">
-              <div className="mb-8">
-                <p className="text-muted-foreground mb-4">Latest:</p>
-                <div className="space-y-8">
-                  {mockBlogs.map((blog) => (
-                    <BlogCard key={blog.id} frontmatter={blog} />
+            <div className="flex flex-col justify-center max-w-[600px] m-auto">
+              <div>
+                <p className="text-muted-foreground mb-4 text-sm">Latest:</p>
+                <div className="group [&>*:not(:last-child)]:mb-6">
+                  {blogs.slice(0, 3).map((frontmatter) => (
+                    <BlogCard key={frontmatter.id} frontmatter={frontmatter} />
                   ))}
                 </div>
               </div>

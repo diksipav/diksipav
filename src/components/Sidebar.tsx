@@ -10,7 +10,7 @@ interface SidebarProps {
 
 const Sidebar = ({ headings }: SidebarProps) => {
   return (
-    <div className="hidden md:block md:w-[calc(50%-300px)] md:fixed md:top-[28vh] md:left-6">
+    <div className="hidden lg:block lg:w-[calc(50%-300px)] lg:fixed lg:top-[28vh] lg:left-6">
       <nav className="flex flex-col gap-3 w-[157px] mx-auto">
         {headings
           .filter((heading) => heading.level === 2)
@@ -18,7 +18,7 @@ const Sidebar = ({ headings }: SidebarProps) => {
             <a
               key={heading.id}
               href={`#${heading.id}`}
-              className="text-[15px] 2xl:text-base leading-5 text-[var(--link-gray)] hover:text-[var(--link-color)] hover:no-underline"
+              className="text-[15px] 2xl:text-base text-[#ababab] hover:text-secondary/90 leading-5 border-none hover:border-none transition-colors duration-300"
             >
               {heading.text}
             </a>

@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 export interface BlogFrontmatter {
   id: string;
   title: string;
-  description: string;
+  desc: string;
   date: string;
-  slug: string;
+  tags: string;
 }
 
 export const useBlogs = () => {
@@ -20,7 +20,7 @@ export const useBlogs = () => {
         });
 
         const blogPromises = Object.entries(blogFiles).map(
-          async ([path, loadFile]) => {
+          async ([, loadFile]) => {
             const content = await loadFile();
             // Extract frontmatter using regex
             const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
@@ -42,9 +42,9 @@ export const useBlogs = () => {
             return {
               id: frontmatter.id,
               title: frontmatter.title,
-              description: frontmatter.description,
+              desc: frontmatter.desc,
               date: frontmatter.date,
-              slug: frontmatter.id || "", // Using id as slug for now, ensure it's not undefined
+              tags: frontmatter.tags,
             };
           }
         );

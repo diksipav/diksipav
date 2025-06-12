@@ -7,8 +7,6 @@ seoTags: Explore efficient methods for reading string files in Rust in this deta
 tags: '#software #rust'
 ---
 
-# Efficient way to read string files in Rust
-
 Today, we will explore a few different methods for reading files in Rust. As a frontend engineer with a huge curiosity for backend and low-level systems, experimenting with Rust has been quite an enjoyable journey. Last year, this system language caught my attention, and since then, I've found myself returning to it time and again.
 
 Recently, I've started a small Rust [CLI project](https://rust-cli.github.io/book/) to deepen my understanding of the language. The task is seemingly simple: create a tool that searches for a string within a file and outputs all lines containing that string to the terminal (basic form of wellknown [grep](https://en.wikipedia.org/wiki/Grep#:~:text=grep%20is%20a%20command%2Dline,which%20has%20the%20same%20effect.)). However, what began as a straightforward exercise soon evolved into an exploration of efficient file reading techniques, particularly for handling large datasets.
@@ -27,7 +25,7 @@ $ cargo run "hello world" random_text.txt
 
 Upon executing this command we should see in the terminal the appropriate lines. If the file does not exist or is somehow corrupted, the tool will provide an appropriate error message.
 
-> Note: Of course, if there are no lines with the phrase you can update the tool to print out the appropriate message too (I'm not doing it here).
+> Of course, if there are no lines with the phrase you can update the tool to print out the appropriate message too (I'm not doing it here).
 
 Text file I'm using here has 10mb, each line is 80 characters long. I'm generating it with Rust too (out of scope for this post, but you can find the script I'm using in the [Github repo](https://github.com/diksipav/simple-rust-grep-tool)).
 
@@ -164,7 +162,6 @@ use std::io::{BufRead, BufReader};
 use anyhow::{Context, Result};
 
 use crate::Cli;
-```
 
 pub fn read_file_line_by_line_better(args: &Cli) -> Result<(), Box<dyn std::error::Error>> {
     let f = File::open(&args.path)
@@ -189,6 +186,7 @@ pub fn read_file_line_by_line_better(args: &Cli) -> Result<(), Box<dyn std::erro
 
     Ok(())
 }
+```
 
 ### Performance: BufReader using one buffer
 

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import BlogCard from "@/components/BlogCard";
 import { useBlogs } from "@/hooks/useBlogs";
+import BackgroundCircles from "@/components/BackgroundCircles";
 
 const Read = () => {
   const { blogs } = useBlogs();
@@ -20,8 +21,9 @@ const Read = () => {
           also write about digital nomad life and personal philosophies."
         />
       </Helmet>
-      <div className="col-start-2 flex justify-center py-10">
-        <div className="w-full max-w-3xl">
+      <BackgroundCircles />
+      <div className="col-start-2 flex justify-center items-center min-h-[calc(100vh-96px-35px)] sm:min-h-[calc(100vh-80px-35px)]">
+        <div className="w-full max-w-3xl group [&>*:not(:last-child)]:mb-6">
           {blogs.map((frontmatter) => (
             <BlogCard key={frontmatter.id} frontmatter={frontmatter} />
           ))}

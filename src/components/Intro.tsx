@@ -26,15 +26,15 @@ const Intro = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center lg:text-left">
+    <div className="flex flex-col items-center md:items-start lg:text-left">
       <img
         src={profileImage}
         alt="Dijana Pavlovic profile image"
-        className="w-[180px] h-[180px] rounded-full mb-8 shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)]"
+        className="w-[180px] h-[180px] rounded-full mb-8 shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)] sm:ml-6"
       />
 
-      <div className="mb-4">
-        <h1 className="">AI & Software Engineer | Consultant</h1>
+      <div className="mb-4 text-center md:text-start">
+        <h1>AI & Software Engineer | Consultant</h1>
         <p className="text-lg mb-4">
           Former (and maybe future) electronics engineer.
         </p>
@@ -50,14 +50,14 @@ const Intro = () => {
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-4 self-start">
+      <div className="flex gap-4 md:self-start">
         {socialLinks.map((social) => (
           <a
             key={social.label}
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-muted-foreground hover:border-none transition-colors duration-200"
+            className="text-muted-foreground hover:text-muted-foreground border-none hover:border-none hover:opacity-80 transition-all"
             aria-label={social.label}
           >
             <social.icon />

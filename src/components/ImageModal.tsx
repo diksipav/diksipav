@@ -49,7 +49,7 @@ const ImageModal = ({ photo, isOpen, onClose }: ImageModalProps) => {
   if (!isOpen || !photo) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 ">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -58,29 +58,39 @@ const ImageModal = ({ photo, isOpen, onClose }: ImageModalProps) => {
 
       {/* Modal */}
       <div
-        className={`relative bg-card backdrop-blur-xl rounded-2xl overflow-hidden animate-scale-in border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.3)] ${
-          photo.aspectRatio < 1 ? "h-[700px]" : "max-w-[60vw]"
+        className={`relative bg-card backdrop-blur-xl rounded-lg overflow-hidden animate-scale-in shadow-[0_0_30px_rgba(0,0,0,0.3)] ${
+          photo.aspectRatio < 1
+            ? "lg:h-[600px] sm:w-[460px] lg:w-[unset]"
+            : "w-[calc(100vw_-_40px)] sm:w-[unset] sm:max-w-[500px] lg:max-w-[800px]"
         }`}
       >
-        <div className="flex h-full">
-          <div className="relative bg-card/70 flex items-center justify-center h-full">
+        <div className="flex h-full flex-col lg:flex-row">
+          <div
+            className={`relative bg-card/70 flex items-center justify-start h-full ${
+              photo.aspectRatio < 1 ? "pt-5 lg:pt-0" : ""
+            }  `}
+          >
             <img
               src={photo.imageUrl}
               alt={photo.title}
-              className="h-full w-auto object-contain"
+              className={`object-contain lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-tr-none ${
+                photo.aspectRatio < 1
+                  ? "ml-5 max-w-[72%] sm:max-w-[56%] lg:ml-0 lg:max-w-[unset] lg:h-full lg:w-auto rounded-lg"
+                  : "rounded-tp-lg rounded-tr-lg"
+              }`}
             />
 
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 w-10 h-10 bg-card/70 hover:bg-card/90 rounded-full flex items-center justify-center text-white transition-colors duration-300"
+              className="absolute top-4 right-4 w-10 h-10 bg-background/60 hover:bg-card/80 rounded-full flex items-center justify-center text-white/90 transition-colors duration-300"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Details Section - fixed width */}
-          <div className="w-[340px] p-6 space-y-6 overflow-y-auto shrink-0">
+          <div className="px-4 py-3 sm:p-6 space-y-6 overflow-y-auto shrink-0 lg:w-[300px]">
             <div>
               <h2 className="text-2xl font-space font-bold mb-4 mt-0">
                 {photo.title.replace(/-/g, " ")}
@@ -114,16 +124,14 @@ const ImageModal = ({ photo, isOpen, onClose }: ImageModalProps) => {
             {/* Download Button */}
             <button
               onClick={downloadImage}
-              className="w-full bg-gradient-to-r from-secondary to-primary text-black font-semibold px-6 rounded-xl hover:shadow-lg hover:shadow-primary/15 transition-all duration-300 flex items-center justify-center gap-3 py-3"
+              className="w-full bg-gradient-to-r from-secondary to-primary text-black font-semibold px-6 rounded-xl hover:shadow-lg hover:shadow-primary/15 transition-all duration-300 flex items-center justify-center gap-3 py-2.5 sm:py-3 max-w-[300px]"
             >
               <Download className="w-5 h-5" />
               Download
             </button>
 
-            {/* Metadata */}
-            <div className="pt-4 border-t border-white/10 text-sm text-muted-foreground">
-              {/* <p>Free for personal and commercial use</p> */}
-              <p className="mt-1 text-muted-foreground text-sm">
+            <div className="pt-4 border-t border-white/15 text-sm text-muted-foreground">
+              <p className="mt-1 text-muted-foreground text-sm mb-2">
                 aspect ratio {Math.round(photo.aspectRatio * 1000) / 1000}
               </p>
             </div>

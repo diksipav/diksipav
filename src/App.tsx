@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Read from "@/pages/Read";
 import BlogPost from "./pages/BlogPost";
 import Footer from "./components/Footer";
+import BgLayout from "./components/BgLayout";
 
 const queryClient = new QueryClient();
 
@@ -21,18 +22,18 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Header />
-          <div className="block px-3 min-h-[calc(100vh_-_80px_-_35px)]">
+          <BgLayout>
+            <Header />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/photography" element={<Photography />} />
-              <Route path="/read" element={<Read />} />
-              <Route path="/read/:slug" element={<BlogPost />} />
+              <Route path="/articles" element={<Read />} />
+              <Route path="/articles/:title" element={<BlogPost />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </div>
-          <Footer />
+            <Footer />
+          </BgLayout>
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>
