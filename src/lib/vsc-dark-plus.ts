@@ -21,7 +21,7 @@ export default {
     padding: "1em",
     margin: ".5em 0",
     overflow: "auto",
-    background: "#1e1e1e",
+    background: "rgb(36, 31, 30)",
     "border-radius": "4px",
   },
   'code[class*="language-"]': {
