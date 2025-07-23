@@ -1,27 +1,27 @@
-import profileImage from "@/assets/images/portfolio.jpg";
-import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "./icons";
+import profileImage from '@/assets/images/portfolio.jpg';
+import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from './icons';
 
 const Intro = () => {
   const socialLinks = [
     {
-      href: "https://github.com/diksipav",
+      href: 'https://github.com/diksipav',
       icon: GithubIcon,
-      label: "GitHub",
+      label: 'GitHub',
     },
     {
-      href: "https://www.linkedin.com/in/diksipav/",
+      href: 'https://www.linkedin.com/in/diksipav/',
       icon: LinkedinIcon,
-      label: "LinkedIn",
+      label: 'LinkedIn',
     },
     {
-      href: "https://x.com/diksipav",
+      href: 'https://x.com/diksipav',
       icon: XIcon,
-      label: "X (Twitter)",
+      label: 'X (Twitter)',
     },
     {
-      href: "https://www.instagram.com/diksipav/",
+      href: 'https://www.instagram.com/diksipav/',
       icon: InstagramIcon,
-      label: "Instagram",
+      label: 'Instagram',
     },
   ];
 
@@ -34,14 +34,14 @@ const Intro = () => {
       />
 
       <div className="mb-4 text-center md:text-start">
-        <h1>AI & Software Engineer | Consultant</h1>
+        <h1>Software & AI Engineer | Consultant</h1>
         <p className="text-lg mb-4">
           Former (and maybe future) electronics engineer.
         </p>
         <p className="text-lg  mb-4">
-          Here, I share my insights on{" "}
-          <span className="text-primary">software</span>,{" "}
-          <span className="text-primary">AI</span>, and all things{" "}
+          Here, I share my insights on{' '}
+          <span className="text-primary">software</span>,{' '}
+          <span className="text-primary">AI</span>, and all things{' '}
           <span className="text-primary">tech</span>.
         </p>
         <p className="text-lg mb-4">
