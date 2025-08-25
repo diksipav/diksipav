@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { Download } from "lucide-react";
-import { PhotoGridProps, Photo } from "@/types/photo";
-import { supabase } from "@/lib/supabase";
-import { useIsMobile } from "@/hooks/useMobile";
+import { useState, useEffect, useRef } from 'react';
+import { Download } from 'lucide-react';
+import { PhotoGridProps, Photo } from '@/types/photo';
+import { supabase } from '@/lib/supabase';
+import { useIsMobile } from '@/hooks/useMobile';
 
 const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -23,9 +23,9 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   const loadPhotos = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase.from("photos").select("*");
+      const { data, error } = await supabase.from('photos').select('*');
       // .order("created_at", { ascending: false });
-      console.log("Didi", data);
+      console.log('Didi', data);
       if (error) {
         throw error;
       }
@@ -42,7 +42,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
 
       setPhotos(transformedPhotos);
     } catch (error) {
-      console.error("Error loading photos:", error);
+      console.error('Error loading photos:', error);
     } finally {
       setIsLoading(false);
     }
@@ -71,8 +71,8 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [photos]);
 
   const downloadImage = async (photo: Photo, e: React.MouseEvent) => {
@@ -82,7 +82,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
       const response = await fetch(photo.imageUrl);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      const a = document.createElement('a');
       a.href = url;
       a.download = `${photo.title}.jpg`;
       document.body.appendChild(a);
@@ -90,7 +90,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
-      console.error("Download failed:", error);
+      console.error('Download failed:', error);
     }
   };
 
@@ -120,7 +120,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
               className="masonry-item cursor-pointer group relative overflow-hidden rounded-sm"
               style={
                 {
-                  "--span": getGridSpan(photo.aspectRatio),
+                  '--span': getGridSpan(photo.aspectRatio),
                 } as React.CSSProperties
               }
               onClick={() => onPhotoSelect(photo)}
@@ -136,7 +136,7 @@ const PhotoGrid = ({ onPhotoSelect }: PhotoGridProps) => {
               <div className="absolute inset-0 image-overlay opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-between p-4">
                 <div className="text-white mr-2">
                   <h3 className="font-space font-semibold text-lg mb-1">
-                    {photo.title.replace(/-/g, " ")}
+                    {photo.title.replace(/-/g, ' ')}
                   </h3>
                   <p className="text-sm text-gray-200 line-clamp-2 m-0">
                     {photo.desc}

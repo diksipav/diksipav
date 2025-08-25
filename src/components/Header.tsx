@@ -1,14 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
-import Nav from "./Nav";
+import { Link, useLocation } from 'react-router-dom';
+import Nav from './Nav';
 
 const Header = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const isHomePage = location.pathname === '/';
 
   return (
     <div
-      className={`sticky px-5 md:px-11  top-0 z-20 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(20,20,20,0.1)] bg-background/90 backdrop-blur-md
-        ${isHomePage ? "md:bg-transparent md:shadow-none" : ""}
+      className={`sticky px-5 md:px-11 top-0 z-20 transition-all duration-300 shadow-[0_4px_6px_-1px_rgba(20,20,20,0.1)] bg-background/90 backdrop-blur-md
+        ${isHomePage ? 'md:bg-transparent md:shadow-none' : ''}
       `}
     >
       <div className="relative">

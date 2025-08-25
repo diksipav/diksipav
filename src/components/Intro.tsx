@@ -1,5 +1,6 @@
 import profileImage from '@/assets/images/portfolio.jpg';
 import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from './icons';
+import { Link } from 'react-router-dom';
 
 const Intro = () => {
   const socialLinks = [
@@ -63,6 +64,9 @@ const Intro = () => {
             <social.icon />
           </a>
         ))}
+        <Link to="/brag-document" className="self-end text-sm">
+          brag doc
+        </Link>
       </div>
     </div>
   );

@@ -3,64 +3,64 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Thin.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Light.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Regular.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Medium.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-SemiBold.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Bold.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-ExtraBold.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-ExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("@/assets/fonts/THICCCBOI-Black.woff2") format("woff2");
+  font-family: 'THICCCBOI';
+  src: url('@/assets/fonts/THICCCBOI-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -173,7 +173,7 @@
     @apply w-[min(100vw,556px)] sm:w-[unset];
   }
 
-  pre code[class*="language-"] {
+  pre code[class*='language-'] {
     @apply p-0 text-[15px] md:text-base bg-[hsl(var(--card))];
   }
 
@@ -246,7 +246,7 @@ blockquote p {
 }
 
 blockquote p:first-of-type::before {
-  content: "NOTE:";
+  content: 'NOTE:';
   font-style: normal;
   padding-right: 4px;
   color: hsl(var(--primary));
