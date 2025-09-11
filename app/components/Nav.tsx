@@ -17,6 +17,14 @@ const Nav = () => {
         articles
       </Link>
       <Link
+        href="/cover-letter"
+        className={`text-lg hover:cursor-pointer ${
+          isActive('/cover-letter') ? 'font-semibold' : 'font-medium'
+        }`}
+      >
+        cover letter
+      </Link>
+      <Link
         href="/photography"
         className={`text-lg hover:cursor-pointer ${
           isActive('/photography') ? 'font-semibold' : 'font-medium'
