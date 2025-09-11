@@ -7,7 +7,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex items-center gap-x-4 sm:gap-x-6 z-[1] relative justify-end py-5 h-full">
+    <div className="flex items-center gap-x-4 sm:gap-x-6 z-[1] relative justify-end pt-2 md:pt-5 h-full">
       <Link
         href="/articles"
         className={`text-lg hover:cursor-pointer ${

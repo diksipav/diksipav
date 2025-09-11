@@ -31,4 +31,4 @@ I’m also preparing to contribute to:
 - Maybe will also contribute to [Tokio](https://tokio.rs/) or some other projects I discover.  
 
 ## Why Rust & Systems Work  
-While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow within a Rust-focused team.  
+While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow within a Rust-focused team. I am also open to full-stack work. It is not that I don't like FE or tooling work—I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to spend time perfecting my skills in a slightly different area of programming.

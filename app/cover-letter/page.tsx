@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cover Letter | Dijana Pavlovic',
-  description: 'My professional achievements and journey',
+  description: 'My journey toward system engineering in Rust.',
 };
 
 async function getCoverLetter() {
@@ -24,7 +24,7 @@ export default async function CoverLetterPage() {
   const content = await getCoverLetter();
 
   return (
-    <div className="px-3 sm:px-5 md:px-11 min-h-[calc(100vh-80px-35px)] my-20">
+    <div className="px-5 sm:px-11 min-h-[calc(100vh-80px-35px)] my-10 md:my-20">
       <div className="max-w-4xl mx-auto py-8">
         <article className="prose prose-invert dark:prose-dark lg:prose-xl max-w-none">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
