@@ -29,7 +29,7 @@ const BlogCard = ({ frontmatter, showDesc = true }: BlogCardProps) => {
           {frontmatter.title}
         </h2>
         {showDesc && (
-          <p className="text-base leading-relaxed mt-3 mb-1 line-clamp-2">
+          <p className="leading-relaxed mt-3 mb-1 line-clamp-2">
             {frontmatter.desc}
           </p>
         )}
