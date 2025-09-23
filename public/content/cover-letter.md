@@ -11,10 +11,12 @@ Despite this, I’ve always felt drawn back to low-level and systems work—wher
 ## Recent Focus  
 Since then, I’ve dedicated myself to Rust and backend/system design:  
 
-- Read ~35% of [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).  
+- Read ~40% of [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).  
 - Completed ~80% of both the [Rust Book](https://rust-book.cs.brown.edu/) and [Async Rust](https://rust-lang.github.io/async-book/intro.html).  
 - Studied the first 3 chapters of [Rust Atomics and Locks](https://marabos.nl/atomics/) and resources like [CPU caches and memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf).
-- Worked through the [Tokio tutorial](https://tokio.rs/tokio/tutorial) and read many blog posts.  
+- Worked through the [Tokio tutorial](https://tokio.rs/tokio/tutorial), read many blog posts, exploring various github projects.
+- Reading [CSAP - Computer Systems](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X).
+- Trying to understand better Linux, virtual machines and containers...
 
 ## I Built a Rust Project  
 I built **[redis-streams](https://github.com/diksipav/redis-streams)**, a Rust library inspired by Redis Streams. While it’s an early version (created in 4 days with the help of AI), it gave me hands-on experience with concurrency, locking, and Tokio.  
