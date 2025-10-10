@@ -2,9 +2,9 @@ I’m writing to express my strong interest in backend and systems engineering r
 
 ## Background  
 
-I am a software engineer with 8 years of professional experience. My journey started in Belgrade, where I attended a high school for gifted mathematicians before studying Electrical Engineering and Electronics at the University of Belgrade. I began my career as a silicon designer for 2 years, then transitioned to software engineering in 2017.  
+I’m a software engineer with eight years of professional experience. My journey began in Belgrade, where I attended a specialized high school for gifted mathematicians before studying Electrical Engineering and Electronics at the University of Belgrade. I started my career as a silicon designer, working in that field for two years before transitioning to software engineering in 2017. At that time, limited opportunities in Serbia, combined with financial constraints and a necessary eye surgery to correct double vision, prevented me from fully pursuing my goals.
 
-Big part of my software career has been focused on frontend development (**Angular, React, Next.js, Svelte, Remix**), along with backend experience in **Node.js** and **NestJS**. For the last 2 years, I worked at [Gel](https://www.geldata.com/) as a TypeScript tooling and AI engineer, where I built AI solutions with both TypeScript and Python.  
+Big part of my software career has been focused on frontend development (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js** and **NestJS**. For the last 2 years, I worked at [Gel](https://www.geldata.com/) as a TypeScript tooling and AI engineer, where I built AI solutions with both TypeScript and Python.  
 
 Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Two months ago, I decided to fully commit to this direction.  
 
@@ -19,6 +19,7 @@ Since then, I’ve dedicated myself to Rust and backend/system design:
 - Spent few days solely with different data structures (BST, RBT, AVL, B Trees, Radix Tree, Skip Lists...).
 - Spent few days understanding better Linux, hardware and OS virtualization, hypervisor, virtual machines, containers...
 - Spent few days researching locks, deadlocks, pessimistic/optimistic locking, priority inversion, semaphores, lock-free data structures, epoch-based memory reclamation, transactional memory ...
+- Read WebKit blog post about [locking data structures](https://webkit.org/blog/6161/locking-in-webkit/) they built.
 - The list will never end—and I’m excited to keep enriching it in my next role 😊😊
 
 ## I Built a Rust Project  
@@ -30,10 +31,10 @@ In retrospect, I realized the design could be improved with a **Radix tree** for
 I merged few PRs to [Meilisearch](https://www.meilisearch.com/). 
 
 I’m also preparing to contribute to:  
-
+- [parking_lot crate](https://crates.io/crates/parking_lot) – I got super interested in understanding how locks are built.
 - [SlateDB](https://slatedb.io/) – currently reading their docs, knowledge from *Designing Data-Intensive Applications* (SSTables, LSM trees, WALs) helps a lot to understand the project.  
 - I find very interesting [rust RocksDB](https://github.com/rust-rocksdb/rust-rocksdb) binding.
-- Maybe will also contribute to [Tokio](https://tokio.rs/) or some other projects I discover.  
+- Maybe will also contribute to [Tokio](https://tokio.rs/) or some other projects. 
 
 ## Why Rust & Systems Work  
 While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow within a Rust-focused team. I am also open to full-stack work. It is not that I don't like FE or tooling work—I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to spend time perfecting my skills in a slightly different area of programming.
