@@ -28,11 +28,11 @@ I built **[redis-streams](https://github.com/diksipav/redis-streams)**, a Rust l
 In retrospect, I realized the design could be improved with a **Radix tree** for efficiency, so I want to explore existing crates or build my own radix tree crate. I also recently learned about **ULID**, which may fit this project well.  
 
 ## Current Exploration & Contributions  
-I merged few PRs to [Meilisearch](https://www.meilisearch.com/). 
+- I merged few PRs to [Meilisearch](https://www.meilisearch.com/).
+- I researched in detail [parking_lot crate](https://crates.io/crates/parking_lot). There are no many issues on this crate, so I am waiting for the opportunity to contribute.
 
 I’m also preparing to contribute to:  
-- [parking_lot crate](https://crates.io/crates/parking_lot) – I got super interested in understanding how locks are built.
-- [SlateDB](https://slatedb.io/) – currently reading their docs, knowledge from *Designing Data-Intensive Applications* (SSTables, LSM trees, WALs) helps a lot to understand the project.  
+- [SlateDB](https://slatedb.io/) – read their docs, knowledge from *Designing Data-Intensive Applications* (SSTables, LSM trees, WALs) helps a lot to understand the project.  
 - I find very interesting [rust RocksDB](https://github.com/rust-rocksdb/rust-rocksdb) binding.
 - Maybe will also contribute to [Tokio](https://tokio.rs/) or some other projects. 
 
