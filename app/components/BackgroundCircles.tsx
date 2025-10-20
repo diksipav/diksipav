@@ -1,5 +1,4 @@
-// components/BackgroundCircles.tsx
-import type { CSSProperties, FC } from "react";
+import type { CSSProperties, FC } from 'react';
 
 const CIRCLES = 15;
 
@@ -19,18 +18,18 @@ const BackgroundCircles: FC = () => (
         opacity: r(0.12, 0.25),
 
         /* ③  Per-circle motion path (in pixels) */
-        ["--x1" as any]: `${r(-70, 70)}px`,
-        ["--y1" as any]: `${r(-70, 70)}px`,
-        ["--x2" as any]: `${r(-70, 70)}px`,
-        ["--y2" as any]: `${r(-70, 70)}px`,
-        ["--x3" as any]: `${r(-70, 70)}px`,
-        ["--y3" as any]: `${r(-70, 70)}px`,
+        ['--x1' as any]: `${r(-70, 70)}px`,
+        ['--y1' as any]: `${r(-70, 70)}px`,
+        ['--x2' as any]: `${r(-70, 70)}px`,
+        ['--y2' as any]: `${r(-70, 70)}px`,
+        ['--x3' as any]: `${r(-70, 70)}px`,
+        ['--y3' as any]: `${r(-70, 70)}px`,
 
         /* ④  Per-circle speed   (8–13 s = visibly faster) */
-        ["--duration" as any]: `${r(10, 15)}s`,
+        ['--duration' as any]: `${r(10, 15)}s`,
 
         /* Optional: slightly softer edges */
-        filter: "blur(0.5px)",
+        filter: 'blur(0.5px)',
       };
 
       return (

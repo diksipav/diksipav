@@ -57,6 +57,10 @@
   }
 }
 
+.animate-drift {
+  animation: drift var(--duration) ease-in-out infinite alternate;
+}
+
 @font-face {
   font-family: 'THICCCBOI';
   src: url('./assets/fonts/THICCCBOI-Thin.woff2') format('woff2');
