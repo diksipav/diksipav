@@ -29,7 +29,7 @@ I built **[redis-streams](https://github.com/diksipav/redis-streams)**, a Rust l
 
 In retrospect, I realized the design could be improved with a **Radix tree** for efficiency, so I want to explore existing crates or build my own radix tree crate. I also recently learned about **ULID**, which may fit this project well.
 
-### Built Another Rust Project
+## Built Another Rust Project
 
 I built a small [VM-Hours Allocation Service](https://github.com/diksipav/concurrent-http-service) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
 
