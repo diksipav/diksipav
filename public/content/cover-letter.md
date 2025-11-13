@@ -6,7 +6,7 @@ I’m a software engineer with ten years of professional experience. My journey 
 
 Big part of my software career has been focused on frontend development (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js** and **NestJS**. For the last 2 years, I worked at [Gel](https://www.geldata.com/) as a TypeScript tooling and AI engineer, where I built AI solutions with both TypeScript and Python.
 
-Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Two months ago, I decided to fully commit to this direction.
+Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Four months ago, I decided to fully commit to this direction.
 
 ## Recent Focus
 
