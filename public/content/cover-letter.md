@@ -1,4 +1,4 @@
-I’m writing to express my strong interest in backend and systems engineering roles, with a particular passion for working with **Rust**.
+I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Rust**.
 
 ## Background
 
@@ -6,7 +6,7 @@ I’m a software engineer with ten years of professional experience. My journey 
 
 Big part of my software career has been focused on frontend development (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js** and **NestJS**. For the last 2 years, I worked at [Gel](https://www.geldata.com/) as a TypeScript tooling and AI engineer, where I built AI solutions with both TypeScript and Python.
 
-Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Four months ago, I decided to fully commit to this direction.
+Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Five months ago, I decided to fully commit to this direction.
 
 ## Recent Focus
 
@@ -21,6 +21,7 @@ Since then, I’ve dedicated myself to Rust and backend/system design:
 - Spent few days understanding better Linux, hardware and OS virtualization, hypervisor, virtual machines, containers...
 - Spent few days researching locks, deadlocks, pessimistic/optimistic locking, priority inversion, semaphores, lock-free data structures, epoch-based memory reclamation, transactional memory ...
 - Read WebKit blog post about [locking data structures](https://webkit.org/blog/6161/locking-in-webkit/) they built.
+- Reading daily [hellointerview](https://www.hellointerview.com/). This is a great resource on system design.
 - The list will never end—and I’m excited to keep enriching it in my next role. 😊😊
 
 ## I Built a Rust Project
@@ -48,4 +49,4 @@ I’m also going through a breakup and I’ve been spending some time healing.
 
 ## Why Rust & Systems Work
 
-While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow within a Rust-focused team. I am also open to full-stack work. It is not that I don't like FE or tooling work — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to spend time perfecting my skills in a slightly different area of programming
+While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow. I am also open to product and full-stack work, as long as it is not 100% frontend. It is not that I don't like FE — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to get involved and get better and more experienced with other areas of software engineering too.
