@@ -12,7 +12,7 @@ Despite this, I’ve always felt drawn back to low-level and systems work—wher
 
 Since then, I’ve dedicated myself to Rust and backend/system design:
 
-- Read ~50% of [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) (and I read and reread slow because I'm trying to understand and remember as much as possible).
+- Read ~50% of [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).
 - Completed ~90% of both the [Rust Book](https://rust-book.cs.brown.edu/) and [Async Rust](https://rust-lang.github.io/async-book/intro.html).
 - Studied half of the [Rust Atomics and Locks](https://marabos.nl/atomics/) and resources like [CPU caches and memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf).
 - Worked through the [Tokio tutorial](https://tokio.rs/tokio/tutorial), read many blog posts, exploring various github projects.
@@ -47,4 +47,4 @@ At the moment, I decided to spend some time on data structures and algorithms, t
 
 ## Why Rust & Systems Work
 
-While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow. I am also open to product and full-stack work, as long as it is not 100% frontend. It is not that I don't like FE — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to get involved and get better and more experienced with other areas of software engineering too.
+While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow. I am also open to product and full-stack work, as long as it is not 100% frontend. It is not that I don't like FE — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to get involved and get better and more experienced with other areas of software engineering.
