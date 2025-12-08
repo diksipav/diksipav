@@ -45,8 +45,6 @@ I built a small [VM-Hours Allocation Service](https://github.com/diksipav/concur
 
 At the moment, I decided to spend some time on data structures and algorithms, this is my [LeetCode profile](https://leetcode.com/u/DijanaPavlovic/). 
 
-I’m also going through a breakup and I’ve been spending some time healing.
-
 ## Why Rust & Systems Work
 
 While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow. I am also open to product and full-stack work, as long as it is not 100% frontend. It is not that I don't like FE — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to get involved and get better and more experienced with other areas of software engineering too.
