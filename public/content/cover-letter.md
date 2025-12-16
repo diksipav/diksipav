@@ -43,7 +43,7 @@ I built a small [VM-Hours Allocation Service](https://github.com/diksipav/concur
 - I researched [Diesel](https://github.com/diesel-rs/diesel) for a few days. This is an ORM and Query Builder for Rust.
 - I also researched [rustfs](https://github.com/rustfs/rustfs) – a high-performance distributed object storage.
 
-At the moment, I decided to spend some time on data structures and algorithms, this is my [LeetCode profile](https://leetcode.com/u/DijanaPavlovi). 
+At the moment, I decided to spend some time on data structures and algorithms, this is my [LeetCode profile](https://leetcode.com/u/DijanaPavlovic). 
 
 ## Why Rust & Systems Work
 
