@@ -27,7 +27,7 @@ Since then, I’ve dedicated myself to Rust, Go and backend/system design:
 
 ## ATM building a Go project
 
-I got few days ago a bit more interested in Go, and I can't believe how much esier it is than Rust. You feel so much more productive with it. I started building a webhooks delivery service to practice the language: [e-commerce-webooks](https://github.com/diksipav/e-commerce-webooks).
+I got few days ago a bit more interested in Go, and I can't believe how much esier it is than Rust. You feel so much more productive. I started building a webhooks delivery service: [e-commerce-webooks](https://github.com/diksipav/e-commerce-webooks).
 
 ## I Built a Rust Project
 
