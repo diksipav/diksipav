@@ -1,4 +1,4 @@
-I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Rust**.
+I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Rust** and **Go**.
 
 ## Background
 
@@ -6,23 +6,28 @@ I’m a software engineer with ten years of professional experience. My journey 
 
 Big part of my software career has been focused on frontend development (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js** and **NestJS**. For the last 2 years, I worked at [Gel](https://www.geldata.com/) as a TypeScript tooling and AI engineer, where I built AI solutions with both TypeScript and Python.
 
-Despite this, I’ve always felt drawn back to low-level and systems work—where I can tackle more complex problems and focus on performance. Five months ago, I decided to fully commit to this direction.
+Despite this, I’ve always felt drawn back to back-end, low-level and systems work—where I can tackle more complex problems and focus on performance. Eight months ago, I decided to fully commit to this direction.
 
 ## Recent Focus
 
-Since then, I’ve dedicated myself to Rust and backend/system design:
+Since then, I’ve dedicated myself to Rust, Go and backend/system design:
 
 - Read ~50% of [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).
 - Completed ~90% of both the [Rust Book](https://rust-book.cs.brown.edu/) and [Async Rust](https://rust-lang.github.io/async-book/intro.html).
 - Studied half of the [Rust Atomics and Locks](https://marabos.nl/atomics/) and resources like [CPU caches and memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf).
+- Got familiar with Golang.
 - Worked through the [Tokio tutorial](https://tokio.rs/tokio/tutorial), read many blog posts, exploring various github projects.
-- Reading [CSAP - Computer Systems](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X).
+- Read [CSAP - Computer Systems](https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X).
 - Spent few days solely with different data structures (BST, RBT, AVL, B Trees, Radix Tree, Skip Lists...).
 - Spent few days understanding better Linux, hardware and OS virtualization, hypervisor, virtual machines, containers...
 - Spent few days researching locks, deadlocks, pessimistic/optimistic locking, priority inversion, semaphores, lock-free data structures, epoch-based memory reclamation, transactional memory ...
 - Read WebKit blog post about [locking data structures](https://webkit.org/blog/6161/locking-in-webkit/) they built.
 - Reading daily [hellointerview](https://www.hellointerview.com/). This is a great resource on system design.
 - The list will never end—and I’m excited to keep enriching it in my next role. 😊😊
+
+## ATM building a Go project
+
+I got few days ago a bit more interested in Go, and I can't believe how much esier it is than Rust. You feel so much more productive with it. I started building a webhooks delivery service to practice the language: [e-commerce-webooks](https://github.com/diksipav/e-commerce-webooks).
 
 ## I Built a Rust Project
 
