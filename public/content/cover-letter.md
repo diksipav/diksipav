@@ -1,4 +1,4 @@
-I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Rust** and **Go**.
+I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Go**, **TS** and **Rust**.
 
 ## Background
 
