@@ -1,21 +1,21 @@
-import { readFile } from 'fs/promises';
-import { join } from 'path';
-import { readdirSync } from 'fs';
-import Layout from '@/components/Layout';
-import BlogCard from '@/components/BlogCard';
-import { BlogFrontmatter } from '@/hooks/useBlogs';
-import BackgroundCircles from '@/components/BackgroundCircles';
+import { readFile } from "fs/promises";
+import { join } from "path";
+import { readdirSync } from "fs";
+import Layout from "@/components/Layout";
+import BlogCard from "@/components/BlogCard";
+import { BlogFrontmatter } from "@/hooks/useBlogs";
+import BackgroundCircles from "@/components/BackgroundCircles";
 
 async function getBlogs(): Promise<BlogFrontmatter[]> {
   try {
-    const blogsPath = join(process.cwd(), 'public/content/blogs');
+    const blogsPath = join(process.cwd(), "public/content/blogs");
     const files = readdirSync(blogsPath);
-    const mdFiles = files.filter((file) => file.endsWith('.md'));
+    const mdFiles = files.filter((file) => file.endsWith(".md"));
 
     const blogPromises = mdFiles.map(async (filename) => {
       try {
         const filePath = join(blogsPath, filename);
-        const content = await readFile(filePath, 'utf-8');
+        const content = await readFile(filePath, "utf-8");
 
         // Extract frontmatter using regex
         const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
@@ -24,13 +24,13 @@ async function getBlogs(): Promise<BlogFrontmatter[]> {
         const frontmatterContent = frontmatterMatch[1];
         const frontmatter: Record<string, string> = {};
 
-        frontmatterContent.split('\n').forEach((line) => {
-          const [key, ...valueParts] = line.split(':');
+        frontmatterContent.split("\n").forEach((line) => {
+          const [key, ...valueParts] = line.split(":");
           if (key && valueParts.length) {
             frontmatter[key.trim()] = valueParts
-              .join(':')
+              .join(":")
               .trim()
-              .replace(/^["']|["']$/g, '');
+              .replace(/^["']|["']$/g, "");
           }
         });
 
@@ -48,22 +48,22 @@ async function getBlogs(): Promise<BlogFrontmatter[]> {
     });
 
     const loadedBlogs = (await Promise.all(blogPromises)).filter(
-      (blog): blog is BlogFrontmatter => blog !== null
+      (blog): blog is BlogFrontmatter => blog !== null,
     );
 
     // Sort blogs by date in descending order
     const sortedBlogs = loadedBlogs.sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
 
     return sortedBlogs;
   } catch (error) {
-    console.error('Error loading blogs:', error);
+    console.error("Error loading blogs:", error);
     return [];
   }
 }
 
-export default async function ArticlesPage() {
+export default async function BlogsPage() {
   const blogs = await getBlogs();
 
   return (

@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const isActive = (path: string) => {
@@ -9,28 +9,36 @@ const Nav = () => {
   return (
     <div className="flex items-center gap-x-4 sm:gap-x-6 z-[1] relative justify-end pt-2 md:pt-5 h-full">
       <Link
-        href="/articles"
+        href="/blog"
         className={`text-lg hover:cursor-pointer ${
-          isActive('/articles') ? 'font-semibold' : 'font-medium'
+          isActive("/blog") ? "font-semibold" : "font-medium"
         }`}
       >
-        articles
+        blog
+      </Link>
+      <Link
+        href="/projects"
+        className={`text-lg hover:cursor-pointer ${
+          isActive("/projects") ? "font-semibold" : "font-medium"
+        }`}
+      >
+        projects
       </Link>
       <Link
         href="/cover-letter"
         className={`text-lg hover:cursor-pointer ${
-          isActive('/cover-letter') ? 'font-semibold' : 'font-medium'
+          isActive("/cover-letter") ? "font-semibold" : "font-medium"
         }`}
       >
         cover letter
       </Link>
       <Link
-        href="/photography"
+        href="/photos"
         className={`text-lg hover:cursor-pointer ${
-          isActive('/photography') ? 'font-semibold' : 'font-medium'
+          isActive("/photos") ? "font-semibold" : "font-medium"
         }`}
       >
-        photography
+        photos
       </Link>
     </div>
   );
