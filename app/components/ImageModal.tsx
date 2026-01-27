@@ -92,7 +92,7 @@ const ImageModal = ({ photo, isOpen, onClose }: ImageModalProps) => {
           {/* Details Section - fixed width */}
           <div className="px-4 py-3 sm:p-6 space-y-6 overflow-y-auto shrink-0 lg:w-[300px]">
             <div>
-              <h2 className="text-2xl font-space font-bold mb-4 mt-0">
+              <h2 className="text-2xl font-bold mb-4 mt-0">
                 {photo.title.replace(/-/g, " ")}
               </h2>
               <p className="text-muted-foreground leading-relaxed">

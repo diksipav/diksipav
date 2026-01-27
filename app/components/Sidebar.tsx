@@ -11,14 +11,14 @@ interface SidebarProps {
 const Sidebar = ({ headings }: SidebarProps) => {
   return (
     <div className="hidden lg:block lg:w-[calc(50%-300px)] lg:fixed lg:top-[28vh] lg:left-6">
-      <nav className="flex flex-col gap-3 w-[157px] mx-auto">
+      <nav className="flex flex-col gap-4 w-[157px] mx-auto">
         {headings
           .filter((heading) => heading.level === 2)
           .map((heading) => (
             <a
               key={heading.id}
               href={`#${heading.id}`}
-              className="text-[15px] text-[#ababab] hover:text-secondary/90 leading-6 border-none hover:border-none transition-colors duration-300"
+              className="text-[11px] text-[#ababab] hover:text-secondary/90 leading-5 border-none hover:border-none transition-colors duration-300"
             >
               {heading.text}
             </a>

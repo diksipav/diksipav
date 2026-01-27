@@ -8,7 +8,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, date, tag, href }: ProjectCardProps) => {
   return (
     <article className="flex">
-      <div className="flex items-start gap-4 text-xs text-[#ababab] mb-2 mt-2 mr-2 max-w-[54px] shrink-0">
+      <div className="text-xs text-[#ababab] mb-2 mt-1 mr-2 max-w-[40px] shrink-0">
         <time>{date}</time>
       </div>
       <a
@@ -17,10 +17,10 @@ const ProjectCard = ({ title, date, tag, href }: ProjectCardProps) => {
         rel="noopener noreferrer"
         className="block hover:opacity-80 transition-opacity border-none hover:border-none"
       >
-        <h2 className="text-lg font-bold my-0 text-foreground leading-tight">
+        <h2 className="text-base font-semibold my-0 text-foreground leading-tight">
           {title}
         </h2>
-        <p className="text-sm mt-1 mb-0 text-[#ababab]">{tag}</p>
+        <p className="text-sm mt-1 mb-0 text-[#ababab]">#{tag}</p>
       </a>
     </article>
   );

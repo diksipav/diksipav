@@ -1,7 +1,6 @@
 import { readFile } from "fs/promises";
 import { join } from "path";
 import { readdirSync } from "fs";
-import Layout from "@/components/Layout";
 import BlogCard from "@/components/BlogCard";
 import { BlogFrontmatter } from "@/hooks/useBlogs";
 import BackgroundCircles from "@/components/BackgroundCircles";
@@ -67,9 +66,9 @@ export default async function BlogsPage() {
   const blogs = await getBlogs();
 
   return (
-    <Layout>
+    <div className="px-5 sm:px-11">
       <BackgroundCircles />
-      <div className="col-start-2 flex justify-center items-center min-h-[calc(100vh-96px-35px)] sm:min-h-[calc(100vh-80px-35px)]">
+      <div className="flex justify-start items-start min-h-[calc(100vh-96px-35px-112px)] sm:min-h-[calc(100vh-80px-35px-112px)] mt-28">
         <div className="w-full max-w-3xl group [&>*:not(:last-child)]:mb-6">
           {blogs.map((frontmatter) => (
             <BlogCard
@@ -80,6 +79,6 @@ export default async function BlogsPage() {
           ))}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }

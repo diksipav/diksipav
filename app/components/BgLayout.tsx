@@ -1,22 +1,23 @@
-'use client';
+"use client";
 
-import { ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
+import { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const isHomePage = usePathname() === '/';
+  const isHomePage = usePathname() === "/";
 
   return (
     <div
-      className={`block ${
-        isHomePage
-          ? 'bg-gradient-to-br from-[#0a0a0a] via-[#0f0a15] to-[#302642]'
-          : 'bg-background'
-      }`}
+      className={`block bg-background}`}
+      style={{
+        backgroundImage:
+          "radial-gradient(circle, rgba(255,255,194,0.1) 1px, transparent 1px)",
+        backgroundSize: "12px 12px",
+      }}
     >
       {children}
     </div>
