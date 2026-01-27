@@ -7,7 +7,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex items-center gap-x-4 sm:gap-x-6 z-[1] relative justify-end h-full">
+    <div className="mt-1 sm:mt-unset flex items-center gap-x-4 sm:gap-x-6 z-[1] relative justify-end h-full">
       <Link
         href="/blog"
         className={`text-md hover:cursor-pointer ${

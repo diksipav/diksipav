@@ -2,7 +2,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default async function ProjectsPage() {
   return (
-    <div className="px-5 sm:px-11 flex justify-start items-start min-h-[calc(100vh-96px-35px-112px)] sm:min-h-[calc(100vh-80px-35px-112px)] mt-28">
+    <div className="px-5 sm:px-11 flex justify-start items-start min-h-[calc(100vh-90px-35px-112px)] sm:min-h-[calc(100vh-80px-35px-112px)] mt-28">
       <div className="w-full max-w-[532px] group [&>*:not(:last-child)]:mb-6">
         <ProjectCard
           title="E-commerce webhooks delivery service"
