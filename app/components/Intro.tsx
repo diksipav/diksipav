@@ -34,7 +34,7 @@ const Intro = () => {
       />
 
       <div className="mb-4 text-center">
-        <h1 className="mx-auto">Senior Software Engineer</h1>
+        <h1 className="mx-auto">Software Engineer</h1>
         <p className="text-md mb-4">
           Former (and maybe future) electronics engineer.
         </p>
