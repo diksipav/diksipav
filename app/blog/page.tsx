@@ -37,6 +37,7 @@ async function getBlogs(): Promise<BlogFrontmatter[]> {
           id: frontmatter.id,
           title: frontmatter.title,
           desc: frontmatter.desc,
+          link: frontmatter.link,
           date: frontmatter.date,
           tags: frontmatter.tags,
         };

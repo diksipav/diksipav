@@ -4,6 +4,7 @@ export interface BlogFrontmatter {
   id: string;
   title: string;
   desc: string;
+  link: string;
   date: string;
   tags: string;
 }
@@ -16,10 +17,11 @@ export const useBlogs = () => {
       try {
         // Get list of blog files - you'll need to maintain this manually or create an API endpoint
         const blogFiles = [
-          'efficient-way-to-read-string-files-in-rust.md',
-          'http-evolution.md', 
-          'networks-and-protocols-101-how-the-internet-connects-the-world.md',
-          'what-is-quantum-computing.md'
+          "efficient-way-to-read-string-files-in-rust.md",
+          "http-evolution.md",
+          "networks-and-protocols-101-how-the-internet-connects-the-world.md",
+          "what-is-quantum-computing.md",
+          "chit-chatting-with-edgedb-docs-via-chatgpt-and-pgvector",
         ];
 
         const blogPromises = blogFiles.map(async (filename) => {
@@ -47,7 +49,8 @@ export const useBlogs = () => {
             return {
               id: frontmatter.id,
               title: frontmatter.title,
-              desc: frontmatter.desc,
+              desc: frontmatter.desc || "",
+              link: frontmatter.link || "",
               date: frontmatter.date,
               tags: frontmatter.tags,
             };
@@ -58,11 +61,11 @@ export const useBlogs = () => {
         });
 
         const loadedBlogs = (await Promise.all(blogPromises)).filter(
-          (blog): blog is BlogFrontmatter => blog !== null
+          (blog): blog is BlogFrontmatter => blog !== null,
         );
         // Sort blogs by date in descending order
         const sortedBlogs = loadedBlogs.sort(
-          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
         );
 
         setBlogs(sortedBlogs);
