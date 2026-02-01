@@ -1,3 +1,4 @@
+import Link from "next/link";
 import profileImage from "@/assets/images/portfolio.jpg";
 import { GithubIcon, LinkedinIcon, XIcon, InstagramIcon } from "./icons";
 
@@ -41,7 +42,13 @@ const Intro = () => {
         <p className="text-md mb-4">Endlessly curious.</p>
         <p className="text-md  mb-4">
           Here, I share my software journey and my insights on all things{" "}
-          <span className="text-primary">tech</span>.
+          <Link
+            href="/blog"
+            className={`text-md hover:cursor-pointer text-primary hover:border-primary`}
+          >
+            tech
+          </Link>
+          .
         </p>
         <p className="text-md mb-4">
           I love nature and anything that gets me outside.
