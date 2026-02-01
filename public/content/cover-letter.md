@@ -1,5 +1,7 @@
 I’m writing to express my strong interest in backend, systems engineering and full-stack roles, with a particular passion for working with **Go**, **TS** and **Rust**.
 
+I’m very motivated to go beyond pure coding and spend part of my time (or extra hours) on DevRel, product or project management, and other cross-functional work. I’m a high-agency, highly motivated person, and I want to use the next few years to work extremely hard and accelerate my growth as much as possible. Right now, I have the energy, focus, and flexibility to invest extra effort and really push myself.
+
 ## Background
 
 I’m a software engineer with ten years of professional experience. My journey began in Belgrade, where I attended a specialized high school for gifted mathematicians before studying Electrical Engineering and Electronics at the University of Belgrade. I started my career as a silicon designer, working in that field for two years before transitioning to software engineering in 2017. At that time, limited opportunities in Serbia, combined with financial constraints and a necessary eye surgery to correct double vision, prevented me from fully pursuing my goals.
@@ -39,7 +41,7 @@ In retrospect, I realized the design could be improved with a **Radix tree** for
 
 I built a small [VM-Hours Allocation Service](https://github.com/diksipav/concurrent-http-service) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
 
-## Current Exploration & Contributions
+## Exploration & Contributions
 
 - I merged few PRs to [Meilisearch](https://www.meilisearch.com/).
 - I researched in detail [parking_lot crate](https://crates.io/crates/parking_lot). There are no many issues on this crate, so I am waiting for the opportunity to contribute.
@@ -50,6 +52,8 @@ I built a small [VM-Hours Allocation Service](https://github.com/diksipav/concur
 
 At the moment, I decided to spend some time on data structures and algorithms, this is my [LeetCode profile](https://leetcode.com/u/DijanaPavlovic). 
 
-## Why Rust & Systems Work
+## Why all this
 
-While I’ve built a career in frontend and AI, my long-term aspiration has always been to design performant systems and solve challenging engineering problems. I’m looking for a role where I can apply my experience, continue learning, and grow. I am also open to product and full-stack work, as long as it is not 100% frontend. It is not that I don't like FE — I enjoy programming in general and I am grateful for all the knowledge and skills I have picked up until now. I just want to get involved and get better and more experienced with other areas of software engineering.
+Long term, my goal is to one day co-found a tech startup. Because of that, I’m intentionally seeking environments where I can grow as an engineer, but also develop strong product intuition, communication skills, ownership, and an understanding of how real-world systems and teams operate end to end. I’m excited by roles where I can contribute beyond my immediate scope, learn from experienced engineers and leaders, and steadily expand the skill set required to build and ship meaningful products.
+
+At this stage of my life, I’m highly motivated, resilient, and ready to invest significant effort into growth. I’m looking for a team where ambition, curiosity, and craftsmanship are valued — and where I can bring the same level of commitment, energy, and care to the work.
