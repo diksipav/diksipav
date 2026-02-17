@@ -8,16 +8,23 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const isHomePage = usePathname() === "/";
-
+  const enableBg =
+    usePathname() === "/" ||
+    usePathname() === "/blog/" ||
+    usePathname() === "/projects/";
+  console.log("usePathname", usePathname());
   return (
     <div
       className={`block bg-background}`}
-      style={{
-        backgroundImage:
-          "radial-gradient(circle, rgba(255,255,194,0.1) 1px, transparent 1px)",
-        backgroundSize: "12px 12px",
-      }}
+      style={
+        enableBg
+          ? {
+              backgroundImage:
+                "radial-gradient(circle, rgba(255,255,194,0.1) 1px, transparent 1px)",
+              backgroundSize: "12px 12px",
+            }
+          : {}
+      }
     >
       {children}
     </div>
