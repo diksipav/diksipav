@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     usePathname() === "/" ||
     usePathname() === "/blog/" ||
     usePathname() === "/projects/";
-  console.log("usePathname", usePathname());
+
   return (
     <div
       className={`block bg-background}`}
