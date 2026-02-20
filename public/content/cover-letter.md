@@ -21,7 +21,7 @@ and [Rust Atomics and Locks](https://marabos.nl/atomics/).
 
 ## Key projects
 
-**Rust**: Built a small [Priority auction marketplace for VM compute hours](https://github.com/diksipav/vmbid) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
+**Rust**: a small [priority auction marketplace for VM compute hours](https://github.com/diksipav/vmbid) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
 
 **Go**:[e-commerce-webhooks](https://github.com/diksipav/e-commerce-webhooks) is a webhooks delivery service, that allows merchants to subscribe to events happening in their store (e.g., orders, shipments). Merchants can register webhooks with a URL and a list of events they want to receive, and this service will deliver notifications to those URLs when the events occur.
 
