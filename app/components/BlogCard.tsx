@@ -30,9 +30,7 @@ const BlogCard = ({ frontmatter }: BlogCardProps) => {
           <h2 className="text-base font-semibold my-0 text-foreground leading-tight">
             {frontmatter.title}
           </h2>
-          <p className="text-sm mt-1 mb-0 text-[#ababab]">
-            #{frontmatter.tags}
-          </p>
+          <p className="text-sm mt-1 mb-0 text-[#ababab]">{frontmatter.tags}</p>
         </a>
       ) : (
         <Link
