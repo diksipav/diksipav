@@ -10,6 +10,18 @@ Much of my career focused on frontend (**Angular, React, Next.js, Svelte**), alo
 
 However, I’ve always gravitated toward backend, low-level systems work where I can solve complex problems and optimize performance. Eight months ago, I committed fully to this path. Since then, I’ve dedicated myself to Rust, Go and backend/system design.
 
+## Exploration & Contributions
+
+Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed.dev/), [SlateDB](https://slatedb.io/), [rustfs](https://github.com/rustfs/rustfs) projects, alongside other popular rust crates and libs.
+
+[rust-clippy/issues/16736](https://github.com/rust-lang/rust-clippy/issues/16736)
+
+## Key projects
+
+**Rust**: a small [priority auction marketplace for VM compute hours](https://github.com/diksipav/vmbid) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
+
+**Go**:[e-commerce-webhooks](https://github.com/diksipav/e-commerce-webhooks) is a webhooks delivery service, that allows merchants to subscribe to events happening in their store (e.g., orders, shipments). Merchants can register webhooks with a URL and a list of events they want to receive, and this service will deliver notifications to those URLs when the events occur.
+
 ## Recent Focus
 
 - Read [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).
@@ -18,16 +30,6 @@ and [Rust Atomics and Locks](https://marabos.nl/atomics/).
 - Got up to speed with Golang.
 - Reading daily [hellointerview](https://www.hellointerview.com/) and various other blogs and resources.
 - Practising [algorithms and data structures](https://leetcode.com/u/DijanaPavlovic/).
-
-## Key projects
-
-**Rust**: a small [priority auction marketplace for VM compute hours](https://github.com/diksipav/vmbid) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
-
-**Go**:[e-commerce-webhooks](https://github.com/diksipav/e-commerce-webhooks) is a webhooks delivery service, that allows merchants to subscribe to events happening in their store (e.g., orders, shipments). Merchants can register webhooks with a URL and a list of events they want to receive, and this service will deliver notifications to those URLs when the events occur.
-
-## Exploration & Contributions
-
-Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed.dev/), [SlateDB](https://slatedb.io/), [rustfs](https://github.com/rustfs/rustfs) projects, alongside other popular rust crates and libs.
 
 ## Why all this
 
