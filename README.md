@@ -3,6 +3,6 @@ I build things. After almost 8 years in FE and full‑stack dev and a background
 I spent years of building emotional strength and reshaping how I see the world due to various life challenges. Now, I’m here—stronger, happier, and more focused than ever.
 You can find more about me on my [blog](https://www.diksipav.com/) or follow me on [Linkedin](https://www.linkedin.com/in/diksipav/). 
 
-Besides tech and coding I love reading, music (especially piano), nature, outdoor activities and exercising, good healthy food and water. ⛰️🏃🏽‍♀️🎶📚
+Besides tech, I love reading, music (especially piano), nature, outdoorsy stuff and exercising, good healthy food and water. ⛰️🏃🏽‍♀️🎶📚
 
 
