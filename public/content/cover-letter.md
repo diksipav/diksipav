@@ -8,7 +8,7 @@ With 10 years of professional experience, I finished a specialized high school f
 
 Much of my career focused on frontend (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js**. For the last two years at [Gel](https://www.geldata.com/) I built SDKs and AI solutions using TypeScript and Python as a tooling / AI engineer.
 
-However, I’ve always gravitated toward backend, low-level systems work where I can solve complex problems and optimize performance. A year ago, I committed fully to this path. Since then, I’ve dedicated myself to Rust and systems / backend engineering concepts. I really love electronics too, and wish my career had taken that direction, but there was little I could do about it back then. 
+However, I’ve always gravitated toward backend, low-level systems work where I can solve complex problems and optimize performance. A year ago, I committed fully to this path. Since then, I’ve dedicated myself to Rust and systems / BE engineering concepts. I really love electronics too, and wish my career had taken that direction, but there was little I could do about it back then. 
 
 ## Exploration & Contributions
 
