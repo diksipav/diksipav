@@ -4,7 +4,7 @@ As a high-agency engineer, I’m ready to invest extra hours to accelerate my gr
 
 ## Background
 
-With 10 years of professional experience, I finished a specialized high school for gifted mathematicians (4.7/5) in Belgrade and graduated from Electronics at the University of Belgrade (9/10). I began as a silicon designer for two years before transitioning to software engineering in 2017. Limited opportunities in Serbia, financial constraints, and necessary eye surgery prevented me from fully pursuing my goals. Back then, my primary focus for years was to start seeing well. Now fully recovered and tremendously grateful, I'm laser-focused on advancing my engineering career.
+With 10 years of professional experience, I finished a specialized high school for gifted mathematicians (4.75/5) in Belgrade and graduated from Electronics at the University of Belgrade (9/10). I began as a silicon designer for two years before transitioning to software engineering in 2017. Limited opportunities in Serbia, financial constraints, and necessary eye surgery prevented me from fully pursuing my goals. Back then, my primary focus for years was to start seeing well. Now fully recovered and tremendously grateful, I'm laser-focused on advancing my engineering career.
 
 Much of my career focused on frontend (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js**. For the last two years at [Gel](https://www.geldata.com/) I built SDKs and AI solutions using TypeScript and Python as a tooling/AI engineer.
 
