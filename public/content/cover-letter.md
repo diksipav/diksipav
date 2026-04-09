@@ -1,14 +1,14 @@
-I’m writing to express my strong interest in backend and systems engineering roles, with a particular passion for working with **Rust**, **Go**, and **TS**.
+I’m writing to express my strong interest in systems and backend engineering roles, with a particular passion for working with **Rust** and **C/C**, though I'm ofc openned to work with other languages too (**TS/JS**) is atm my strongest language.
 
-I’m eager to go beyond coding, contributing to DevRel, product management, or cross-functional projects. As a high-agency engineer, I’m ready to invest extra hours to accelerate my growth over the next few years.
+As a high-agency engineer, I’m ready to invest extra hours to accelerate my growth over the next few years.
 
 ## Background
 
-With 10 years of professional experience, I graduated from a specialized high school for gifted mathematicians in Belgrade and studied Electronics at the University of Belgrade. I began as a silicon designer for two years before transitioning to software engineering in 2017. Limited opportunities in Serbia, financial constraints, and necessary eye surgery prevented me from fully pursuing my goals.
+With 10 years of professional experience, I finished a specialized high school for gifted mathematicians (4.7/5) in Belgrade and graduated from Electronics at the University of Belgrade (9/10). I began as a silicon designer for two years before transitioning to software engineering in 2017. Limited opportunities in Serbia, financial constraints, and necessary eye surgery prevented me from fully pursuing my goals. Back then, my primary focus for years was to start seeing well. Now fully recovered and tremendously grateful, I'm laser-focused on advancing my engineering career.
 
 Much of my career focused on frontend (**Angular, React, Next.js, Svelte**), along with backend experience in **Node.js**. For the last two years at [Gel](https://www.geldata.com/) I built SDKs and AI solutions using TypeScript and Python as a tooling/AI engineer.
 
-However, I’ve always gravitated toward backend, low-level systems work where I can solve complex problems and optimize performance. Eight months ago, I committed fully to this path. Since then, I’ve dedicated myself to Rust, Go and backend/system design.
+However, I’ve always gravitated toward backend, low-level systems work where I can solve complex problems and optimize performance. A year ago, I committed fully to this path. Since then, I’ve dedicated myself to Rust and systems/backend engineering concepts. I really love electronics too, and wish my career had taken that direction, but there was little I could do about it back then. 
 
 ## Exploration & Contributions
 
