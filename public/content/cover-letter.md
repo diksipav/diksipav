@@ -1,4 +1,4 @@
-I’m writing to express my strong interest in systems and backend engineering roles, with a particular passion for working with **Rust** and **C/C++**, though I'm ofc openned to work with other languages too, **TS/JS** is atm my strongest language.
+I’m writing to express my strong interest in systems and backend engineering roles, with a particular passion for working with **Rust** and **C/C++**, though I'm of course open to other languages. **TS/JS** is atm my strongest language.
 
 As a high-agency engineer, I’m ready to invest extra hours to accelerate my growth over the next few years.
 
