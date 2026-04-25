@@ -16,6 +16,8 @@ Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed
 
 [rust-clippy/issues/16736](https://github.com/rust-lang/rust-clippy/issues/16736)
 
+Researched Rust compiler internals, incremental compilation, autodiff, hierarchy of Sized traits... Paused this for now as I have to focus on finding a job, plan to return to it as soon as possible.
+
 ## Key projects
 
 **Rust**: a small [priority auction marketplace for VM compute hours](https://github.com/diksipav/vmbid) where users can send HTTP requests to buy VM hours, and providers can send requests to sell resources. The system matches buyers with available supply, always prioritizing those willing to pay the highest price. It is designed to handle high concurrency, and if multiple buyers submit requests at the same price, the system serves them in the order their requests were received, using an atomic sequence counter to ensure fairness.
