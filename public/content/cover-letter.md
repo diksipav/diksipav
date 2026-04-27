@@ -32,7 +32,3 @@ and [Rust Atomics and Locks](https://marabos.nl/atomics/).
 - Got up to speed with Golang.
 - Reading daily [hellointerview](https://www.hellointerview.com/) and various other blogs and resources.
 - Practising [algorithms and data structures](https://leetcode.com/u/DijanaPavlovic/).
-
-## Why all this
-
-Long term, my goal is to one day co-found a tech startup. Because of that, I’m intentionally seeking environments where I can grow as an engineer, but also develop strong product intuition, communication skills, ownership, and an understanding of how real-world systems and teams operate end to end. I’m excited by roles where I can learn from experienced engineers and leaders, and steadily expand the skill set required to build and ship meaningful products.
