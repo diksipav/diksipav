@@ -1,6 +1,6 @@
-I’m writing to express my strong interest in systems, backend and embedded engineering roles, with a particular passion for working with **Rust** and **C/C++**, though I'm of course open to other languages. **TS/JS** is atm my strongest language. I love both software and hardware.
+I’m writing to express my strong interest in systems and backend engineering roles, with a particular passion for working with **Rust**, **C/C++** and **Java**, though I'm of course open to other languages. **TS/JS** is atm my strongest language. I love both software and hardware.
 
-As a high-agency engineer, I’m ready to invest extra hours to accelerate my growth over the next few years.
+As a high-agency engineer, I’m ready to invest extra hours to accelerate my growth over the next few years. I want to strengthen my technical expertise while deliberately building leadership skills.
 
 ## Background
 
