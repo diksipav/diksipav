@@ -21,9 +21,9 @@ and [Rust Atomics and Locks](https://marabos.nl/atomics/).
 
 ## Exploration & Contributions
 
-Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed.dev/), [SlateDB](https://slatedb.io/), [rustfs](https://github.com/rustfs/rustfs) projects, alongside other popular rust crates and libs. Created few minor PRs to Meili and Rust, including research for [rust-clippy/issues/16736](https://github.com/rust-lang/rust-clippy/issues/16736).
+Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed.dev/), [SlateDB](https://slatedb.io/), [rustfs](https://github.com/rustfs/rustfs) projects, alongside other popular rust crates and libs. Created few minor PRs to Meili and Rust.
 
-Researched Rust compiler internals, incremental compilation, autodiff, hierarchy of Sized traits... Paused this for now as I have to focus on finding a job, plan to return to it as soon as possible.
+Researched Rust compiler internals, incremental compilation, autodiff, hierarchy of Sized traits... Paused this for now as I have to focus on finding a job.
 
 ## Key projects
 
