@@ -12,12 +12,13 @@ However, I’ve always gravitated toward low-level systems work where I can solv
 
 ## Recent Focus
 
-- Practising [algorithms and data structures](https://leetcode.com/u/DijanaPavlovic/). TBH, I hate that my language of choice is JS as it does not have many built-in, low-level data structures compared to languages like Java, C++, or Python. Nevertheless, I got very comfy with heaps, treesets/maps, queues, deques etc...
-- Reading daily [hellointerview](https://www.hellointerview.com/) and various other blogs and resources.
+- Practising algorithms and data structures almost daily. TBH, I don't like that my language of choice is JS as it does not have many built-in, low-level data structures compared to languages like Java, C++, or Python. Nevertheless, I got comfy with heaps, treesets/maps, queues, deques etc...
+- Expanding my system design skills and understanding by reading various resources and building projects for fun.
 - Read [Designing Data-Intensive Applications (Kleppmann)](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321).
 - Completed the [Rust Book](https://rust-book.cs.brown.edu/), [Async Rust](https://rust-lang.github.io/async-book/intro.html),
 and [Rust Atomics and Locks](https://marabos.nl/atomics/).
 - Finished [PostgreSQL tutorial](https://www.pgtutorial.com/). Understanding PostgreSQL internals is another beautiful journey to take (I just scratched it).
+- Explored a range of other topics and realized I’d like to take a deeper dive into Linux someday.
 
 ## Exploration & Contributions
 
