@@ -8,10 +8,10 @@ tags: '#rust'
 ---
 
 This morning I was very determined to understand what is really going on with `let s = "hello world";`.
-I knew that the text is part of the program binary executable and that s is of type `&'static str`.
+I knew that the text is part of the program binary executable and that `s` is of type `&'static str`.
 
 I researched a bit and came with the following understanding (ofc, there is still so much to understand, 
-to read the whole `CS:APP`, `OSTEP`, assembly gudes, and bunch of other resources I know and don't know about).
+to read the whole CS:APP, OSTEP, assembly guides, and bunch of other resources I know and don't know about).
 
 I poked around a bit and here’s my current understanding. Of course, there’s still an infinite amount to 
 learn (grind through CS:APP, OSTEP, assembly guides, and a bunch of other resources I know and don’t know about).
