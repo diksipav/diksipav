@@ -21,6 +21,8 @@ and first 2 chapters of [Rust Atomics and Locks](https://marabos.nl/atomics/).
 
 ## Exploration & Contributions
 
+Recently created my first [Tokio PR](https://github.com/tokio-rs/tokio/pull/8757).
+
 Researched [Meilisearch](https://www.meilisearch.com/), [Zed editor](https://zed.dev/), [SlateDB](https://slatedb.io/) projects and rust language itself. Created few minor PRs to Meili and Rust.
 
 Researched Rust compiler internals, incremental compilation, autodiff, hierarchy of Sized traits... Paused this for now as I have to focus on finding a job.
