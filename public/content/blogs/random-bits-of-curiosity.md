@@ -13,9 +13,6 @@ I knew that the text is part of the program binary executable and that `s` is of
 I researched a bit and came with the following understanding (ofc, there is still so much to understand, 
 to read the whole CS:APP, OSTEP, assembly guides, and bunch of other resources I know and don't know about).
 
-I poked around a bit and here’s my current understanding. Of course, there’s still an infinite amount to 
-learn (grind through CS:APP, OSTEP, assembly guides, and a bunch of other resources I know and don’t know about).
-
 At compile time, the compiler places the text in the read-only part of the binary (usually `.rodata` on Linux) 
 and records a symbol/reference to its address, along with its length. The compiler also decides the layout 
 of the function’s stack frame, including the offset at which the address and length of `s` will be stored.
